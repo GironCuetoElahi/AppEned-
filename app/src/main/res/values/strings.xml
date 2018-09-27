@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ENED 2018</string>
+    <string name="navigation_drawer_open">Abrir Navegador</string>
+    <string name="navigation_drawer_close">Cerrar Navegador</string>
+</resources>
