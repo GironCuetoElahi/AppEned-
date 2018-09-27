@@ -1,4 +1,4 @@
-package com.example.ito.aplicacionenedit;
+package com.example.elahi.aplicacionened;
 
 import android.content.Context;
 import android.net.Uri;
