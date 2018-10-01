@@ -41,8 +41,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     Toast.makeText(this, "Resultados", Toast.LENGTH_SHORT).show();
                     break;
                 case R.id.nav_calendario:
-                    Toast.makeText(this, "Calendario", Toast.LENGTH_SHORT).show();
-                    break;
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            new Calendario()).commit();
                 case R.id.nav_ubicacion:
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new Mapa()).commit();
