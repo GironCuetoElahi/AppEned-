@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="85dp"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="9dp"
+        app:srcCompat="@drawable/futbol" />
+
+    <TextView
+        android:id="@+id/Equipo1"
+        android:layout_width="94dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="21dp"
+        android:text="TEC OAXACA"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Equipo2"
+        android:layout_width="100dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@+id/Equipo1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="-1dp"
+        android:text="TEC CELAYA"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/versus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Equipo1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="144dp"
+        android:layout_marginBottom="5dp"
+        android:text="VS" />
+
+    <TextView
+        android:id="@+id/sede"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/Equipo1"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="62dp"
+        android:text="Instituto Tecnologico de Oaxaca"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/horario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Equipo2"
+        android:layout_alignBottom="@+id/sede"
+        android:text="14:00" />
+</android.widget.RelativeLayout>

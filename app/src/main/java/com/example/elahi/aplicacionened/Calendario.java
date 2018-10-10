@@ -25,7 +25,8 @@ public class Calendario extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_calendario, container, false);
-       /* tabLayout = (TabLayout) view.findViewById(R.id.tablayout);
+       tabLayout = (TabLayout) view.findViewById(R.id.tablayout);
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE);
         appBarLayout = (AppBarLayout) view.findViewById(R.id.appbarid);
         viewPager = (ViewPager) view.findViewById(R.id.pager);
         ViewPagerAdpaterCalendario adapter = new ViewPagerAdpaterCalendario(getFragmentManager());
@@ -35,7 +36,9 @@ public class Calendario extends Fragment {
         adapter.addFragment(new Fragment_Voleibol_playa(),"Voleibol Playa");
         adapter.addFragment(new Fragment_Beisbol(), "Béisbol");
         adapter.addFragment(new Fragment_Ajedrez(),"Ajedrez");
-        adapter.addFragment(new Fragment_Natacion(),"Natación");*/
+        adapter.addFragment(new Fragment_Natacion(),"Natación");
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
         return view;
     }
 

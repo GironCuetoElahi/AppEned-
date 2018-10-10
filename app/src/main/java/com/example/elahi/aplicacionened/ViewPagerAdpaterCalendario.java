@@ -21,18 +21,20 @@ public class ViewPagerAdpaterCalendario extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+
         return fragmentList.get(position);
     }
 
     @Override
     public int getCount() {
-        return fragmentList.size();
+
+        return FragmentListTitles.size();
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return FragmentListTitles.get(position);
     }
 
      public void addFragment (Fragment fragment, String Titulo){

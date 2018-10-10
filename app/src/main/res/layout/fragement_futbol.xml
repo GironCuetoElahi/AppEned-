@@ -5,15 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".Fragement_futbol">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="149dp"
-        android:layout_height="77dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="203dp"
-        android:text="FUTBOL"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+    </ListView>
 
 </RelativeLayout>

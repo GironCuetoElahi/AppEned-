@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 case R.id.nav_calendario:
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new Calendario()).commit();
+                    break;
                 case R.id.nav_ubicacion:
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new Mapa()).commit();
