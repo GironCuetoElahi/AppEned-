@@ -8,6 +8,11 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <FrameLayout
+        android:id="@+id/fragment_container2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
     <TextView
         android:id="@+id/textView2"
@@ -158,19 +163,14 @@
         android:layout_marginBottom="72dp"
         android:src="@android:drawable/sym_action_call" />
 
-    <TextView
-        android:id="@+id/editText2"
-        android:layout_width="293dp"
+    <Button
+        android:id="@+id/boton1"
+        android:layout_width="321dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="12dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="¿QUÉ HACER EN CASO DE SISMO?"
-        android:textColor="#3c7aff"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:layout_centerHorizontal="true"
+        android:text="¿Qué hacer en caso de sismo?"
+        android:textColor="#0000ff"
+        android:textSize="17dp" />
 
 </RelativeLayout>

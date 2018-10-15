@@ -11,8 +11,6 @@
         android:layout_height="81dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="9dp"
         app:srcCompat="@drawable/futbol" />
 
     <TextView
@@ -43,18 +41,17 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Equipo1"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="144dp"
-        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="149dp"
         android:text="VS" />
 
     <TextView
         android:id="@+id/sede"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/Equipo1"
         android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/Equipo1"
         android:layout_marginTop="62dp"
-        android:text="Instituto Tecnologico de Oaxaca"
+        android:text="IT OAXACA"
         android:textStyle="italic" />
 
     <TextView
@@ -64,4 +61,12 @@
         android:layout_alignEnd="@+id/Equipo2"
         android:layout_alignBottom="@+id/sede"
         android:text="14:00" />
+
+    <TextView
+        android:id="@+id/jornada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/versus"
+        android:layout_alignTop="@+id/sede"
+        android:text="JORNADA 1" />
 </android.widget.RelativeLayout>

@@ -35,7 +35,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
             switch (menuItem.getItemId()){
                 case R.id.nav_noticias:
-                    Toast.makeText(this, "Noticias", Toast.LENGTH_SHORT).show();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            new Noticias()).commit();
                     break;
                 case R.id.nav_resultados:
                     Toast.makeText(this, "Resultados", Toast.LENGTH_SHORT).show();
