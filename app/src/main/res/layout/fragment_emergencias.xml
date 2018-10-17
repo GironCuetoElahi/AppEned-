@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Emergencias">
 
     <!-- TODO: Update blank fragment layout -->
@@ -162,15 +163,5 @@
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="72dp"
         android:src="@android:drawable/sym_action_call" />
-
-    <Button
-        android:id="@+id/boton1"
-        android:layout_width="321dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:text="¿Qué hacer en caso de sismo?"
-        android:textColor="#0000ff"
-        android:textSize="17dp" />
 
 </RelativeLayout>

@@ -8,10 +8,7 @@
             android:id="@+id/nav_noticias"
             android:icon="@drawable/ic_noticias"
             android:title="Noticias" />
-        <item
-            android:id="@+id/nav_resultados"
-            android:icon="@drawable/ic_resultados"
-            android:title="Resultados" />
+
         <item
             android:id="@+id/nav_calendario"
             android:icon="@drawable/ic_calendario"

@@ -33,32 +33,32 @@ public class Fragment_Basquetbol extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("TUXTEPEC","OAXACA","IT OAXACA","16:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. GUZMAN","TUXTLA GTZ","LA SALLE","16:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. MADERO","NOGALES","LA SALLE","20:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","CANCÚN","UABJO","16:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TEPIC","VERACRUZ","UABJO","20:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TACÁMBARO","URUAPAN","URSE","16:00",R.drawable.basket,"JORNADA 1"));
-        Partido.add(new Clase_futbol("PUEBLA","TOLUCA","URSE","20:00",R.drawable.basket,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TUXTEPEC","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","TUXTLA GTZ","LA SALLE","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. MADERO","NOGALES","LA SALLE","20:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","CANCÚN","UABJO","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TEPIC","VERACRUZ","UABJO","20:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TACÁMBARO","URUAPAN","URSE","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PUEBLA","TOLUCA","URSE","20:00",R.drawable.basketball,"JORNADA 1"));
         //JORNADA2
-        Partido.add(new Clase_futbol("TUXTEPEC","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","OAXACA","IT OAXACA","16:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD. GUZMAN","NOGALES","LA SALLE","16:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TUXTLA GTZ.","CD. MADERO","LA SALLE","20:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","VERACRUZ","UABJO","16:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CANCÚN","TEPIC","UABJO","20:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TACÁMBARO","TOLUCA","URSE","16:00",R.drawable.basket,"JORNADA 2"));
-        Partido.add(new Clase_futbol("URUAPAN","PUEBLA","URSE","20:00",R.drawable.basket,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TUXTEPEC","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","NOGALES","LA SALLE","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TUXTLA GTZ.","CD. MADERO","LA SALLE","20:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","VERACRUZ","UABJO","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CANCÚN","TEPIC","UABJO","20:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TACÁMBARO","TOLUCA","URSE","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("URUAPAN","PUEBLA","URSE","20:00",R.drawable.basketball,"JORNADA 2"));
         //JORNADA3
-        Partido.add(new Clase_futbol("TUXTEPEC","NUEVO LAREDO","IT OAXACA","20:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("ORIENTE EDO HGO","OAXACA","IT OAXACA","16:00",R.drawable.basket,"JORNADA "));
-        Partido.add(new Clase_futbol("CD. GUZMAN","CD. MADERO","LA SALLE","16:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("NOGALES","TUXTLA GTZ.","LA SALLE","20:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","TEPIC","UABJO","16:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("VERACRUZ","CANCÚN","UABJO","20:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TACÁMBARO","PUEBLA","URSE","16:00",R.drawable.basket,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TOLUCA","URUAPAN","URSE","20:00",R.drawable.basket,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TUXTEPEC","NUEVO LAREDO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("ORIENTE EDO HGO","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA "));
+        Partido.add(new Clase_futbol("CD. GUZMAN","CD. MADERO","LA SALLE","16:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("NOGALES","TUXTLA GTZ.","LA SALLE","20:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","TEPIC","UABJO","16:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("VERACRUZ","CANCÚN","UABJO","20:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TACÁMBARO","PUEBLA","URSE","16:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TOLUCA","URUAPAN","URSE","20:00",R.drawable.basketball,"JORNADA 3"));
     }
 
     private void PartidoView(){
@@ -69,14 +69,14 @@ public class Fragment_Basquetbol extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view,Partido);
+            super(getActivity(), R.layout.item_view2,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
             Fragment_Basquetbol.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view2, parent,false);
 
                 holder = new Fragment_Basquetbol.ViewHolder();
 

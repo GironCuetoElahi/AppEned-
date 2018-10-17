@@ -33,32 +33,32 @@ public class Fragment_Beisbol extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","E. VASCON","09:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","E. VASCON","12:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("COMALCALCO","HUATABAMPO","A. A. HARP","09:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("URUAPAN","MAZATLAN","A. A. HARP","12:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","ISTMO","SN BARTOLO","09:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("QUERÈTARO","VERACRUZ","SN BARTOLO","12:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("OAXACA","AGUASCALIENTES","IT OAXACA","12:00",R.drawable.beisbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("PABELLON DE A.","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.beisbol,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","E. VASCON","09:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","E. VASCON","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("COMALCALCO","HUATABAMPO","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("URUAPAN","MAZATLAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","ISTMO","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("QUERÈTARO","VERACRUZ","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("OAXACA","AGUASCALIENTES","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PABELLON DE A.","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 1"));
         //JORNADA2
-        Partido.add(new Clase_futbol("PUEBLA","MÉRIDA","E. VASCON","09:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ATITALAQUIA","SALTILLO","E. VASCON","12:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("COMALCALCO","MAZATLÁN","A. A. HARP","09:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("HUATABAMPO","URUAPAN","A. A. HARP","12:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","VERACRUZ","SN BARTOLO","09:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ISTMO","QUERÉTARO","SN BARTOLO","12:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("OAXACA","PABELLON DE A.","IT OAXACA","12:00",R.drawable.beisbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("AGUASCALIENTES","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.beisbol,"JORNADA 2"));
+        Partido.add(new Clase_futbol("PUEBLA","MÉRIDA","E. VASCON","09:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ATITALAQUIA","SALTILLO","E. VASCON","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("COMALCALCO","MAZATLÁN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("HUATABAMPO","URUAPAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","VERACRUZ","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ISTMO","QUERÉTARO","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("OAXACA","PABELLON DE A.","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("AGUASCALIENTES","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 2"));
         //JORNADA3
-        Partido.add(new Clase_futbol("PUEBLA","SALTILLO","E. VASCON","09:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MÉRIDA","ATITALAQUIA","E. VASCON","12:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("COMALCALCO","URUAPAN","A. A. HARP","09:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MAZATLÁN","HUATABAMPO","A. A. HARP","12:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","QUERÉTARO","SN BARTOLO","09:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO","12:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("OAXACA","CD. CUAUHTEMOC","IT OAXACA","12:00",R.drawable.beisbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("PABELLON DE A.","AGUASCALIENTES","IT OAXACA","09:00",R.drawable.beisbol,"JORNADA 3"));
+        Partido.add(new Clase_futbol("PUEBLA","SALTILLO","E. VASCON","09:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("MÉRIDA","ATITALAQUIA","E. VASCON","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("COMALCALCO","URUAPAN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("MAZATLÁN","HUATABAMPO","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","QUERÉTARO","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("OAXACA","CD. CUAUHTEMOC","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("PABELLON DE A.","AGUASCALIENTES","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 3"));
     }
 
     private void PartidoView(){
@@ -69,14 +69,14 @@ public class Fragment_Beisbol extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view,Partido);
+            super(getActivity(), R.layout.item_view4,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
             Fragment_Beisbol.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view4, parent,false);
 
                 holder = new Fragment_Beisbol.ViewHolder();
 

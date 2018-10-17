@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="85dp"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/horario"
+        app:srcCompat="@drawable/futbol" />
+
+    <TextView
+        android:id="@+id/fecha"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:text="INSTITUTO DE OAXACA VAPULEA"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="277dp"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@+id/logo"
+        android:layout_alignParentEnd="true"
+        android:text="El ITO golea al Instituto Tecnologico de Pachuca tras anotar 6 goles en el partido realizado en Nazareno" />
+
+</android.widget.RelativeLayout>

@@ -33,32 +33,32 @@ public class Fragement_futbol extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("CELAYA","TEPIC","LA SALLE","10:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD GUZMAN","COMALCALCO","LA SALLE","14:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TLALNEPANTLA","VERACRUZ","NAZARENO","10:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("LA LAGUNA","TOLUCA","NAZARENO","14:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("HUATABUAMPO","SIERRA NTE PUEBLA","MRCI","10:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TUXTEPEC","DURANGO","MRCI","14:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("MERIDA","MATEHUALA","IT OAXACA","14:00",R.drawable.futbol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CUAUTLA","OAXACA","IT OAXACA","10:00",R.drawable.futbol,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CELAYA","TEPIC","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD GUZMAN","COMALCALCO","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","VERACRUZ","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("LA LAGUNA","TOLUCA","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","SIERRA NTE PUEBLA","MRCI","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TUXTEPEC","DURANGO","MRCI","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("MERIDA","MATEHUALA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CUAUTLA","OAXACA","IT OAXACA","10:00",R.drawable.noticiafut,"JORNADA 1"));
         //JORNADA2
-        Partido.add(new Clase_futbol("CELAYA","COMALCALCO","LA SALLE","10:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TEPIC","CD. GUZMAN","LA SALLE","14:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TLALNEPANTLA","TOLUCA","NAZARENO","10:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("VERACRUZ","LA LAGUNA","NAZARENO","14:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("HUATABUAMPO","DURANGO","MRCI","10:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("SIERRA NTE PUEBLA","TUXTEPEC","MRCI","14:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("MERIDA","OAXACA","IT OAXACA","14:00",R.drawable.futbol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("MATEHUALA","CUAUTLA","IT OAXACA","14:00",R.drawable.futbol,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CELAYA","COMALCALCO","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TEPIC","CD. GUZMAN","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","TOLUCA","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("VERACRUZ","LA LAGUNA","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","DURANGO","MRCI","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("SIERRA NTE PUEBLA","TUXTEPEC","MRCI","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MERIDA","OAXACA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MATEHUALA","CUAUTLA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 2"));
         //JORNADA3
-        Partido.add(new Clase_futbol("CELAYA","CD. GUZMAN","LA SALLE","10:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("COMALCALCO","TEPIC","LA SALLE","14:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TLALNEPANTLA","LA LAGUNA","NAZARENO","10:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TOLUCA","VERACRUZ","NAZARENO","14:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("HUATABUAMPO","TUXTEPEC","MRCI","10:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("DURANGO","SIERRA NTE PUEBLA","MRCI","14:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CUAUTLA","MÉRIDA","IT OAXACA","14:00",R.drawable.futbol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("OAXACA","MATEHUALA","IT OAXACA","10:00",R.drawable.futbol,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CELAYA","CD. GUZMAN","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("COMALCALCO","TEPIC","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","LA LAGUNA","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TOLUCA","VERACRUZ","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","TUXTEPEC","MRCI","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("DURANGO","SIERRA NTE PUEBLA","MRCI","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CUAUTLA","MÉRIDA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("OAXACA","MATEHUALA","IT OAXACA","10:00",R.drawable.noticiafut,"JORNADA 3"));
 
     }
 
