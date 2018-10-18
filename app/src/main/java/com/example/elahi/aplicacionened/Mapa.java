@@ -157,6 +157,7 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
         LatLng crespo           = new LatLng(17.06811,-96.72736);
         LatLng innexpress       = new LatLng(17.07051,-96.71661);
         LatLng huautla          = new LatLng(17.07989,-96.74067);
+        LatLng comedor          = new LatLng(17.07264,-96.68463);
 
 
         googleMap.addMarker(new MarkerOptions().position(misionAngeles)
@@ -263,6 +264,11 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
                 .title("Hotel Huautla")
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.hotel))
                 .snippet("Hotel Huautla")
+        );
+        googleMap.addMarker(new MarkerOptions().position(comedor)
+                .title("Quinta el Tremolin")
+                .icon(BitmapDescriptorFactory.fromResource(R.mipmap.comedor))
+                .snippet("Quinta el Tremolin")
         );
 
         // Más opciones para el marcador en:

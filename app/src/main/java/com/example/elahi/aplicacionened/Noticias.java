@@ -41,7 +41,7 @@ public class Noticias extends Fragment {
     public static String text5;
     public static String text6;
 
-    private List<Clase_noticia> Noticia=new ArrayList<Clase_noticia>();
+    private static List<Clase_noticia> Noticia=new ArrayList<Clase_noticia>();
     View view;
     private String DEBUG_TAG;
 
@@ -52,27 +52,30 @@ public class Noticias extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_noticias, container, false);
-        buscar();
-        Noticia();
-        NoticiaView();
+        if(isConected(this.getContext())!=true){
+            Toast.makeText(getContext(),"Error en conectarse a Red",Toast.LENGTH_SHORT).show();
+        }else{
+            Toast.makeText(getContext(),"Cargando Noticias",Toast.LENGTH_SHORT).show();
+            buscar();
+            NoticiaView();
+        }
         return view;
 
     }
 
-    public void imprime(String aux) {
+    public static void imprime(String aux) {
         String[] parts = aux.split(";");
+        Noticia.clear();
+
         for(int i=0;i<parts.length-1;i++){
             if (!parts[i+1].equals("")) {
                 String[] parts2=parts[i].split("&");
-                //Activity algo=this.getActivity();
                 sup1=parts2[0];
                 sup2=parts2[1];
-                //Noticias.add(new Obj_noticias(R.drawable.news,parts2[0],parts2[1]));
-                //Toast.makeText(getActivity(),text1+text2, Toast.LENGTH_LONG).show();
+                Log.i("Datos",""+parts2[0]+parts2[1]);
+                Noticia(sup1,sup2);
             }
         }
-            text1=sup1;
-            text2=sup2;
     }
 
 
@@ -100,7 +103,7 @@ public class Noticias extends Fragment {
 
     }
 
-    private class DownloadWebpageTask extends AsyncTask<String, Void, String> {
+    private static class DownloadWebpageTask extends AsyncTask<String, Void, String> {
         @Override
         protected String doInBackground(String... urls) {
 
@@ -118,7 +121,7 @@ public class Noticias extends Fragment {
         }
     }
 
-    private String downloadUrl(String myurl) throws IOException {
+    private static String downloadUrl(String myurl) throws IOException {
         InputStream is = null;
 
         try {
@@ -131,7 +134,7 @@ public class Noticias extends Fragment {
             // Inicia la consulta
             conn.connect();
             int response = conn.getResponseCode();
-            Log.d(DEBUG_TAG, "La respuesta es: " + response);
+            Log.d( myurl,"La respuesta es: " + response);
             is = conn.getInputStream();
             //Para descargar la página web completa
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -148,20 +151,19 @@ public class Noticias extends Fragment {
             }
         }
     }
-
-
-    private void  Noticia(){
-
-        //Toast.makeText(getActivity(),text1+text2, Toast.LENGTH_LONG).show();
-
-        Noticia.add(new Clase_noticia (text1,text2,R.drawable.news));
-        //Noticia.add(new Clase_noticia ("EXPULSADO POR TRAMPOSO",text2,R.drawable.news));
-
+    private static void  Noticia(String encab,String texto){
+        Noticia.add(new Clase_noticia (encab,texto,R.drawable.news));
     }
+
+    private static void Noticia(){
+        Noticia.add(new Clase_noticia (sup1+"",sup2+"",R.drawable.news));
+    }
+
     private void NoticiaView(){
         ArrayAdapter<Clase_noticia> adapter=new MyListAdapter();
         ListView list=(ListView) view.findViewById(R.id.listview);
         list.setAdapter(adapter);
+
     }
 
     private class MyListAdapter extends ArrayAdapter<Clase_noticia>{
@@ -178,14 +180,15 @@ public class Noticias extends Fragment {
                 holder = new ViewHolder();
 
                 holder.imageView = (ImageView) itemView.findViewById(R.id.logo) ;
-                holder.Texto=(TextView) itemView.findViewById(R.id.fecha) ;
+                holder.Texto=(TextView) itemView.findViewById(R.id.titulo) ;
                 holder.Encabezado=(TextView) itemView.findViewById(R.id.textView);
 
-                itemView.setTag(holder);}
+                itemView.setTag(holder);
+            }
 
-            else
+            else {
                 holder = (ViewHolder) itemView.getTag();
-
+            }
             Clase_noticia CurrentPartido= Noticia.get(position);
 
             holder.imageView.setImageResource(CurrentPartido.getImagen());
@@ -207,7 +210,6 @@ public class Noticias extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        //Noticia.clear();
     }
 
 

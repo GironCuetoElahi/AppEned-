@@ -82,7 +82,7 @@
                                           <PersistentState>
                                             <option name="values">
                                               <map>
-                                                <entry key="paddingPercent" value="50" />
+                                                <entry key="paddingPercent" value="15" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
@@ -94,8 +94,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/canchas.png" />
-                                      <entry key="outputName" value="canchas" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/comedor.gif" />
+                                      <entry key="outputName" value="comedor" />
                                     </map>
                                   </option>
                                 </PersistentState>
