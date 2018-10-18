@@ -36,32 +36,32 @@ public class Fragment_Voleibol_playa_Femenil extends Fragment {
 
     private void Partido(){
         //JORNADA 1
-        Partido.add(new Clase_futbol("TAPACHULA","ZACATECAS","LA SALLE","08:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("DURANGO","ENSENADA","LA SALLE","09:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD MADERO","MERIDA","LA SALLE","10:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("4","LEON","LA SALLE","11:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TEPIC","HERMOSILLO","LA SALLE","12:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CIUDAD HIDALGO","ORIZABA","LA SALLE","13:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("PROGRESO","COSTA GRANDE","LA SALLE","14:00",R.drawable.voleibol,"JORNADA 1"));
-        Partido.add(new Clase_futbol("HUICHAPAN","MORELIA","LA SALLE","15:00",R.drawable.voleibol,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TAPACHULA","ZACATECAS","LA SALLE","08:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("DURANGO","ENSENADA","LA SALLE","09:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD MADERO","MERIDA","LA SALLE","10:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("4","LEON","LA SALLE","11:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TEPIC","HERMOSILLO","LA SALLE","12:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CIUDAD HIDALGO","ORIZABA","LA SALLE","13:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PROGRESO","COSTA GRANDE","LA SALLE","14:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("HUICHAPAN","MORELIA","LA SALLE","15:00",R.drawable.playa,"JORNADA 1"));
         //JORNADA 2
-        Partido.add(new Clase_futbol("TAPACHULA","ENSENADA","LA SALLE","08:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ZACATECAS","DURANGO","LA SALLE","09:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD MADERO","LEÓN","LA SALLE","10:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("MÉRIDA","4","LA SALLE","11:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TEPIC","ORIZABA","LA SALLE","12:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("HERMOSILLO","CD HIDALGO","LA SALLE","13:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("PROGRESO","MORELIA","LA SALLE","14:00",R.drawable.voleibol,"JORNADA 2"));
-        Partido.add(new Clase_futbol("COSTA GRANDE","HUICHAPAN","LA SALLE","15:00",R.drawable.voleibol,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TAPACHULA","ENSENADA","LA SALLE","08:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ZACATECAS","DURANGO","LA SALLE","09:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD MADERO","LEÓN","LA SALLE","10:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MÉRIDA","4","LA SALLE","11:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TEPIC","ORIZABA","LA SALLE","12:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("HERMOSILLO","CD HIDALGO","LA SALLE","13:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("PROGRESO","MORELIA","LA SALLE","14:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("COSTA GRANDE","HUICHAPAN","LA SALLE","15:00",R.drawable.playa,"JORNADA 2"));
         //JORNADAS 3
-        Partido.add(new Clase_futbol("TAPACHULA","DURANGO","LA SALLE","08:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("ENSENADA","ZACATECAS","LA SALLE","09:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD MADERO","4","LA SALLE","10:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("LEÓN","MÉRIDA","LA SALLE","11:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TEPIC","CD HIDALGO","LA SALLE","12:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("ORIZABA","HERMOSILLO","LA SALLE","13:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("PROGRESO","HUICHAPAN","LA SALLE","14:00",R.drawable.voleibol,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MORELIA","COSTA GRANDE","LA SALLE","15:00",R.drawable.voleibol,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TAPACHULA","DURANGO","LA SALLE","08:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("ENSENADA","ZACATECAS","LA SALLE","09:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD MADERO","4","LA SALLE","10:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("LEÓN","MÉRIDA","LA SALLE","11:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TEPIC","CD HIDALGO","LA SALLE","12:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("ORIZABA","HERMOSILLO","LA SALLE","13:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("PROGRESO","HUICHAPAN","LA SALLE","14:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("MORELIA","COSTA GRANDE","LA SALLE","15:00",R.drawable.playa,"JORNADA 3"));
 
     }
 
@@ -73,14 +73,14 @@ public class Fragment_Voleibol_playa_Femenil extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view,Partido);
+            super(getActivity(), R.layout.item_view9,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
             Fragment_Voleibol_playa_Femenil.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view9, parent,false);
 
                 holder = new Fragment_Voleibol_playa_Femenil.ViewHolder();
 

@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+<<<<<<< HEAD
 import android.widget.Toast;
 
 import java.io.BufferedReader;
@@ -24,6 +25,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+=======
+
+>>>>>>> 9323aa3c35ca9d791a2d4e04c8bda28f22b4fadf
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,8 +36,12 @@ import java.util.List;
  * A simple {@link Fragment} subclass.
  */
 public class Noticias extends Fragment {
+<<<<<<< HEAD
     private List<Obj_noticias> Noticias=new ArrayList<Obj_noticias>();
 
+=======
+    private List<Clase_noticia> Noticia=new ArrayList<Clase_noticia>();
+>>>>>>> 9323aa3c35ca9d791a2d4e04c8bda28f22b4fadf
     View view;
     private String DEBUG_TAG;
 
@@ -44,11 +52,87 @@ public class Noticias extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_noticias, container, false);
+<<<<<<< HEAD
         buscar();
         PartidoView();
+=======
+        Noticia();
+        NoticiaView();
+>>>>>>> 9323aa3c35ca9d791a2d4e04c8bda28f22b4fadf
         return view;
+
     }
 
+
+    private void  Noticia(){
+        //JORNADA1
+        Noticia.add(new Clase_noticia ("OAXACA GOLEA A PACHUCA","El ITO golea al Instituto Tecnologico de Pachuca tras anotar 6 goles en el partido realizado en Nazareno",R.drawable.noticiafut));
+
+    }
+
+    private void NoticiaView(){
+        ArrayAdapter<Clase_noticia> adapter=new MyListAdapter();
+        ListView list=(ListView) view.findViewById(R.id.listview);
+        list.setAdapter(adapter);
+    }
+
+    private class MyListAdapter extends ArrayAdapter<Clase_noticia>{
+        public MyListAdapter(){
+            super(getActivity(), R.layout.item_view_noticias, Noticia);
+        }
+
+        public View getView (int position, View convertView, ViewGroup parent){
+            ViewHolder holder = null;
+            View itemView = convertView;
+            if (itemView==null){
+                itemView=getLayoutInflater().inflate(R.layout.item_view_noticias, parent,false);
+
+                holder = new ViewHolder();
+
+                holder.imageView = (ImageView) itemView.findViewById(R.id.logo) ;
+                holder.Texto=(TextView) itemView.findViewById(R.id.fecha) ;
+                holder.Encabezado=(TextView) itemView.findViewById(R.id.textView);
+
+                itemView.setTag(holder);}
+
+            else
+                holder = (ViewHolder) itemView.getTag();
+
+            Clase_noticia CurrentPartido= Noticia.get(position);
+
+            holder.imageView.setImageResource(CurrentPartido.getImagen());
+            holder.Texto.setText(CurrentPartido.getTexto());
+            holder.Encabezado.setText(CurrentPartido.getEncabezado());
+
+            return itemView;
+        }
+
+    }
+
+    static class ViewHolder{
+        ImageView imageView;
+        TextView Texto;
+        TextView Encabezado;
+
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        Noticia.clear();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+    }
+
+<<<<<<< HEAD
     /**************************************************************************************************************************/
 
     private void PartidoView(){
@@ -194,5 +278,10 @@ public class Noticias extends Fragment {
             }
         }
     }
+=======
+>>>>>>> 9323aa3c35ca9d791a2d4e04c8bda28f22b4fadf
 
 }
+
+
+

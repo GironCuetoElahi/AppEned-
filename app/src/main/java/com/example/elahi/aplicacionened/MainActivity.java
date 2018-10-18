@@ -51,9 +51,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new Noticias()).commit();
                     break;
-                case R.id.nav_resultados:
+                /*case R.id.nav_resultados:
                     Toast.makeText(this, "Resultados", Toast.LENGTH_SHORT).show();
-                    break;
+                    break;*/
                 case R.id.nav_calendario:
                     getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                             new Calendario()).commit();
