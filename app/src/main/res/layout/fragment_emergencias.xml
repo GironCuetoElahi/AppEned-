@@ -5,15 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Emergencias">
+    tools:context=".Emergencias"
+    android:background="@drawable/enedlogo2">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:id="@+id/llamar_imss"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="370dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/emergency" />
 
-    <FrameLayout
-        android:id="@+id/fragment_container2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <ImageButton
+        android:id="@+id/llamar_cruz"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="291dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/emergency" />
 
+    <ImageButton
+        android:id="@+id/llamar_bomb"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="214dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/emergency" />
+
+    <ImageButton
+        android:id="@+id/llamar_protec"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="148dp"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/emergency" />
 
     <TextView
         android:id="@+id/textView2"
@@ -47,17 +80,8 @@
         android:layout_marginStart="18dp"
         android:layout_marginTop="95dp"
         android:text="POLICIA ESTATAL"
-        android:textColor="#000000" />
-
-    <ImageButton
-        android:id="@+id/llamar_policia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="82dp"
-        android:layout_marginEnd="0dp"
-        android:src="@android:drawable/sym_action_call" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
@@ -65,20 +89,11 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/textView4"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="167dp"
         android:text="PROTECCIÓN CIVIL"
-        android:textColor="#000000" />
-
-    <ImageButton
-        android:id="@+id/llamar_proteccion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="143dp"
-        android:layout_marginEnd="-1dp"
-        android:src="@android:drawable/sym_action_call" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView6"
@@ -87,19 +102,10 @@
         android:layout_alignStart="@+id/textView4"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="228dp"
         android:text="BOMBEROS"
-        android:textColor="#000000" />
-
-    <ImageButton
-        android:id="@+id/llamar_bomberos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="209dp"
-        android:layout_marginEnd="0dp"
-        android:src="@android:drawable/sym_action_call" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView7"
@@ -108,60 +114,31 @@
         android:layout_alignStart="@+id/textView4"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="1dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginBottom="189dp"
         android:text="CRUZ ROJA"
-        android:textColor="#000000" />
-
-    <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="197dp"
-        android:src="@android:drawable/sym_action_call" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:layout_width="76dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="69dp"
-        android:layout_marginBottom="145dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="107dp"
         android:layout_toStartOf="@+id/textView3"
         android:text="IMSS"
-        android:textColor="#000000" />
+        android:textColor="#000000"
+        android:textStyle="bold" />
 
     <ImageButton
-        android:id="@+id/llamar_imss"
-        android:layout_width="wrap_content"
+        android:id="@+id/llamar_poli"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="131dp"
-        android:src="@android:drawable/sym_action_call" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="89dp"
-        android:text="CENTRO OPERATIVO"
-        android:textColor="#000000" />
-
-    <ImageButton
-        android:id="@+id/llamar_operativo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/textView2"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="72dp"
-        android:src="@android:drawable/sym_action_call" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="81dp"
+        android:layout_marginEnd="21dp"
+        android:src="@drawable/emergency" />
 
 </RelativeLayout>

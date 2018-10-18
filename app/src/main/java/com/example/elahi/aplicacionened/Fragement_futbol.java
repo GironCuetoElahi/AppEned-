@@ -120,7 +120,7 @@ public class Fragement_futbol extends Fragment {
         super.onDestroyView();
       Partido.clear();
     }
-/*
+
     @Override
     public void onDestroy() {
         super.onDestroy();
@@ -130,6 +130,6 @@ public class Fragement_futbol extends Fragment {
     public void onDetach() {
         super.onDetach();
     }
-*/
+
 
 }

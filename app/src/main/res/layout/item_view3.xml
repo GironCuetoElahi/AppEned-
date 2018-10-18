@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/lib/com.example.elahi.aplicacionened"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="69dp"
-        android:layout_height="72dp"
+        android:layout_width="58dp"
+        android:layout_height="63dp"
         android:layout_alignBottom="@+id/sede"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="9dp"
         app:srcCompat="@drawable/futbol" />
 
     <TextView
@@ -70,4 +71,4 @@
         android:layout_alignStart="@+id/versus"
         android:layout_alignTop="@+id/sede"
         android:text="JORNADA 1" />
-</android.widget.RelativeLayout>
+</RelativeLayout>

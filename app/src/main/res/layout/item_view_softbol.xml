@@ -7,12 +7,12 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="65dp"
-        android:layout_height="60dp"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="13dp"
         app:srcCompat="@drawable/futbol" />
 
     <TextView
@@ -47,21 +47,14 @@
         android:text="VS" />
 
     <TextView
-        android:id="@+id/sede"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/Equipo1"
-        android:layout_marginTop="62dp"
-        android:text="IT OAXACA"
-        android:textStyle="italic" />
-
-    <TextView
         android:id="@+id/horario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/Equipo2"
         android:layout_alignBottom="@+id/sede"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="33dp"
         android:text="14:00" />
 
     <TextView
@@ -69,6 +62,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/versus"
-        android:layout_alignTop="@+id/sede"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-95dp"
+        android:layout_marginTop="69dp"
         android:text="JORNADA 1" />
 </RelativeLayout>

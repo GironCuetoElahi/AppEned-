@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/lib/com.example.elahi.aplicacionened"
+    xmlns:app2="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="85dp"
-        android:layout_height="81dp"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/horario"
-        app:srcCompat="@drawable/futbol" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/fecha"
@@ -19,15 +13,30 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/textView"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-2dp"
         android:text="INSTITUTO DE OAXACA VAPULEA"
+        android:textColor="#000000"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="277dp"
-        android:layout_height="49dp"
+        android:layout_width="266dp"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/logo"
         android:layout_alignParentEnd="true"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="0dp"
         android:text="El ITO golea al Instituto Tecnologico de Pachuca tras anotar 6 goles en el partido realizado en Nazareno" />
 
-</android.widget.RelativeLayout>
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="64dp"
+        android:layout_height="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="9dp"
+        app2:srcCompat="@drawable/news" />
+
+</RelativeLayout>

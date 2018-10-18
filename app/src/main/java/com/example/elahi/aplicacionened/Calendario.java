@@ -39,8 +39,8 @@ public class Calendario extends Fragment {
         adapter.addFragment(new Fragment_Voleibol_playa(),"Voleibol Playa");
         adapter.addFragment(new Fragment_Voleibol_playa_Femenil(),"Voleibol Playa Femenil");
         adapter.addFragment(new Fragment_Beisbol(), "Béisbol");
-        adapter.addFragment(new Fragment_Ajedrez(),"Ajedrez");
-        adapter.addFragment(new Fragment_Natacion(),"Natación");
+        adapter.addFragment(new Fragment_Ajedrez(),"Sóftbol");
+        //adapter.addFragment(new Fragment_Natacion(),"Natación");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         return view;
