@@ -27,9 +27,9 @@ public class Fragment_futbol_femenil extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view= inflater.inflate(R.layout.fragment_futbol_femenil, container, false);
-        Partido();
-        PartidoView();
+        view= inflater.inflate(R.layout.fragment_noticias, container, false);
+        //Partido();
+        //PartidoView();
         return view;
     }
 
@@ -116,7 +116,7 @@ public class Fragment_futbol_femenil extends Fragment {
         TextView Horario;
         TextView Jornada;
     }
-
+/*
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -134,6 +134,6 @@ public class Fragment_futbol_femenil extends Fragment {
         super.onDetach();
         Partido.clear();
     }
-
+*/
 
 }
