@@ -3,6 +3,7 @@ package com.example.elahi.aplicacionened;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +12,18 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.elahi.aplicacionened.data.models.PartidoModel;
+import com.example.elahi.aplicacionened.data.models.Partidos;
+import com.example.elahi.aplicacionened.data.remote.APIService;
+import com.example.elahi.aplicacionened.data.remote.ApiUtils;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Fragment_Beisbol extends Fragment {
@@ -20,45 +31,86 @@ public class Fragment_Beisbol extends Fragment {
     View view;
     private List<Clase_futbol> Partido = new ArrayList<Clase_futbol>();
 
+    private APIService mAPIService;
+
+    private static final String TAG="FRAGMENT_BEISBOL";
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =inflater.inflate(R.layout.fragment__beisbol, container, false);
+
+        mAPIService = ApiUtils.getAPIService();
+        Partido.clear();
+        Partido();
+
         PartidoView();
+
         return view;
     }
 
-   /* private void Partido(){
-        //JORNADA1
-        Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("COMALCALCO","HUATABAMPO","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("URUAPAN","MAZATLAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","ISTMO","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("QUERÈTARO","VERACRUZ","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("OAXACA","AGUASCALIENTES","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("PABELLON DE A.","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 1"));
-        //JORNADA2
-        Partido.add(new Clase_futbol("PUEBLA","MÉRIDA","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ATITALAQUIA","SALTILLO","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("COMALCALCO","MAZATLÁN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("HUATABAMPO","URUAPAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","VERACRUZ","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ISTMO","QUERÉTARO","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("OAXACA","PABELLON DE A.","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("AGUASCALIENTES","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 2"));
-        //JORNADA3
-        Partido.add(new Clase_futbol("PUEBLA","SALTILLO","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MÉRIDA","ATITALAQUIA","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("COMALCALCO","URUAPAN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MAZATLÁN","HUATABAMPO","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","QUERÉTARO","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("OAXACA","CD. CUAUHTEMOC","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("PABELLON DE A.","AGUASCALIENTES","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 3"));
-    }*/
+    private void Partido(){
+
+
+        Calendar fecha = Calendar.getInstance();
+        // int año = fecha.get(Calendar.YEAR);
+        int mes = fecha.get(Calendar.MONTH) + 1;
+        int dia = fecha.get(Calendar.DAY_OF_MONTH);
+
+        String jornadita="";
+        String journal="";
+        if(dia==22 && mes==10 ){
+            jornadita = "J2";
+            journal="JORNADA 2";
+        }else if(dia==23 && mes==10 ){
+            jornadita = "J3";
+            journal="JORNADA 3";
+        }else if(dia==24 && mes==10 ){
+            jornadita = "S";
+            journal="SEMIFINAL";
+        }else if(dia==25 && mes==10 ){
+            jornadita = "F";
+            journal="FINAL";
+        } else {
+            jornadita = "J1";
+            journal="JORNADA 1";
+        }
+
+        Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
+        final String act= journal;
+
+        mAPIService.savePartidos("FUTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
+            @Override
+            public void onResponse(Call<Partidos> call, Response<Partidos> response) {
+
+                Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+response.code());
+                Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+call.request());
+
+                if(response.body().getPartidos() != null) {
+
+                    final List<PartidoModel> parts = response.body().getPartidos();
+                    for(int i=0; i < parts.size(); i++){
+
+                        Partido.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.noticiafut, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
+                    }
+                    PartidoView();
+                }else{
+                    //NOTHING
+                }
+
+
+            }
+
+            @Override
+            public void onFailure(Call<Partidos> call, Throwable t) {
+                Log.d(TAG,"NO");
+                Log.d(TAG,"NO"+t.getMessage());
+            }
+        });
+
+    }
 
     private void PartidoView(){
         ArrayAdapter<Clase_futbol> adapter=new MyListAdapter();

@@ -4,6 +4,18 @@ import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 public class PartidoModel {
+
+    public PartidoModel(String id, String local, String visita, String sede, String jornada, String hora, String genero, String res1, String res2) {
+        this.id = id;
+        this.local = local;
+        this.visita = visita;
+        this.sede = sede;
+        Jornada = jornada;
+        this.hora = hora;
+        this.genero = genero;
+        this.res1 = res1;
+        this.res2 = res2;
+    }
     @SerializedName("id")
     @Expose
     private String id;
@@ -40,15 +52,31 @@ public class PartidoModel {
     @Expose
     private String genero;
 
+    @SerializedName("res1")
+    @Expose
+    private String res1;
 
-    public PartidoModel(String id, String local, String visita, String sede, String jornada, String hora, String genero) {
-        this.id = id;
-        this.local = local;
-        this.visita = visita;
-        this.sede = sede;
-        Jornada = jornada;
-        this.hora = hora;
-        this.genero = genero;
+    @SerializedName("res2")
+    @Expose
+    private String res2;
+
+
+
+
+    public String getRes1() {
+        return res1;
+    }
+
+    public void setRes1(String res1) {
+        this.res1 = res1;
+    }
+
+    public String getRes2() {
+        return res2;
+    }
+
+    public void setRes2(String res2) {
+        this.res2 = res2;
     }
 
     public String getId() {
@@ -98,6 +126,8 @@ public class PartidoModel {
     public void setGenero(String genero) {
         this.genero = genero;
     }
+
+
 
 
 }
