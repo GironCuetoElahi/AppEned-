@@ -34,30 +34,30 @@ public class Fragment_Basquetbol_femenil extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("CHILPANCINGO","TIJUANA","LA SALLE","14:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD HIDALGO","TLALNEPANTLA","LA SALLE","18:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CHILPANCINGO","TIJUANA","CRENO","14:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD HIDALGO","TLALNEPANTLA","CRENO","18:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("TLAXIACO","POZA RICA","URSE","14:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("ORIZABA","LOS MOCHIS","URSE","18:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("SAN LUIS P.","CHIHUAHUA","UABJO","14:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("MERIDA","TUXTLA GTZ","UABJO","18:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("SAN LUIS P.","CHIHUAHUA","R F MAGÓN","14:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("MERIDA","TUXTLA GTZ","R F MAGÓN","18:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("LA LAGUNA","OAXACA","IT OAXACA","14:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("GUANAJUATO","CELAYA","IT OAXACA","18:00",R.drawable.basketball,"JORNADA 1"));
         //JORNADA2
-        Partido.add(new Clase_futbol("CHILPANCINGO","TLALNEPANTLA","LA SALLE","14:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TIJUANA","CD. HIDALGO","LA SALLE","18:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CHILPANCINGO","TLALNEPANTLA","CRENO","14:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TIJUANA","CD. HIDALGO","CRENO","18:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("TLAXIACO","LOS MOCHIS","URSE","14:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("POZA RICA","ORIZABA","URSE","18:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("SAN LUIS P.","TUXTLA GTZ.","UABJO","14:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CHIHUAHUA","MÉRIDA","UABJO","18:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("SAN LUIS P.","TUXTLA GTZ.","R F MAGÓN","14:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CHIHUAHUA","MÉRIDA","R F MAGÓN","18:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("CELAYA","LA LAGUNA","IT OAXACA","18:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("OAXACA","GUANAJUATO","IT OAXACA","14:00",R.drawable.basketball,"JORNADA 2"));
         //JORNADA3
-        Partido.add(new Clase_futbol("CHILPANCINGO","CD. HIDALGO","LA SALLE","14:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TLALNEPANTLA","TIJUANA","LA SALLE","18:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CHILPANCINGO","CD. HIDALGO","CRENO","14:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","TIJUANA","CRENO","18:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("TLAXIACO","ORIZABA","URSE","14:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("LOS MOCHIS","POZA RICA","URSE","18:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("SAN LUIS P.","MÉRIDA","UABJO","14:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TUXTLA GTZ","CHIHUAHUA","UABJO","18:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("SAN LUIS P.","MÉRIDA","R F MAGÓN","14:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TUXTLA GTZ","CHIHUAHUA","R F MAGÓN","18:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("CELAYA","OAXACA","IT OAXACA","14:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("LA LAGUNA","GUANAJUATO","IT OAXACA","18:00",R.drawable.basketball,"JORNADA 3"));
     }

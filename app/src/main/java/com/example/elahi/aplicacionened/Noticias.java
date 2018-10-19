@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+
 public class Noticias extends Fragment {
 
     public static String text1;
@@ -44,6 +45,12 @@ public class Noticias extends Fragment {
     private static List<Clase_noticia> Noticia=new ArrayList<Clase_noticia>();
     View view;
     private String DEBUG_TAG;
+
+
+    public void onCreate(Bundle savedInstanceState){
+        super.onCreate(savedInstanceState);
+        buscar();
+    }
 
 
 
@@ -214,6 +221,5 @@ public class Noticias extends Fragment {
 
 
 }
-
 
 

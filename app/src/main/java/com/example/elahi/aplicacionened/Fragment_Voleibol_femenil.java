@@ -37,30 +37,30 @@ public class Fragment_Voleibol_femenil extends Fragment {
         //JORNADA1
         Partido.add(new Clase_futbol("CIUDAD MADERO","CELAYA","IT OAXACA","09:00",R.drawable.volleyball,"JORNADA 1"));
         Partido.add(new Clase_futbol("PACHUCA","OAXACA","IT OAXACA","10:00",R.drawable.volleyball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("LA LAGUNA","PUEBLA","LA SALLE","09:00",R.drawable.volleyball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("COATZACOALCOS","CIUDAD GUZMAN","LA SALLE","10:00",R.drawable.volleyball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("LA LAGUNA","PUEBLA","R.F. MAGÓN 1","09:00",R.drawable.volleyball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("COATZACOALCOS","CIUDAD GUZMAN","R.F. MAGÓN","10:00",R.drawable.volleyball,"JORNADA 1"));
         Partido.add(new Clase_futbol("QUERETARO","DURANGO","URSE","09:00",R.drawable.volleyball,"JORNADA 1"));
         Partido.add(new Clase_futbol("CANCUN","GUASAVE","URSE","10:00",R.drawable.volleyball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. ALTAMIRANO","CUENCA DE P.","UABJO","09:00",R.drawable.volleyball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TIJUANA","POZA RICA","UABJO","10:00",R.drawable.volleyball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. ALTAMIRANO","CUENCA DE P.","R.F. MAGÓN 3","09:00",R.drawable.volleyball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TIJUANA","POZA RICA","R FLORES MAGÓN 3","10:00",R.drawable.volleyball,"JORNADA 1"));
         //JORNADA2
         Partido.add(new Clase_futbol("CIUDAD MADERO","OAXACA","IT OAXACA","10:00",R.drawable.volleyball,"JORNADA 2"));
         Partido.add(new Clase_futbol("CELAYA","PACHUCA","IT OAXACA","09:00",R.drawable.volleyball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("LA LAGUNA","CD. GUZMAN","LA SALLE","09:00",R.drawable.volleyball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("PUEBLA","COATZACOALCOS","LA SALLE","10:00",R.drawable.volleyball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("LA LAGUNA","CD. GUZMAN","R.F. MAGÓN","09:00",R.drawable.volleyball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("PUEBLA","COATZACOALCOS","R.F. MAGÓN","10:00",R.drawable.volleyball,"JORNADA 2"));
         Partido.add(new Clase_futbol("QUERETARO","GUASAVE","URSE","09:00",R.drawable.volleyball,"JORNADA 2"));
         Partido.add(new Clase_futbol("DURANGO","CANCÚN","URSE","10:00",R.drawable.volleyball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD. ALTAMIRANO","POZA RICA","UABJO","09:00",R.drawable.volleyball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CUENCA DE P.","TIJUANA","UABJO","10:00",R.drawable.volleyball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD. ALTAMIRANO","POZA RICA","R.F. MAGÓN 3","09:00",R.drawable.volleyball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CUENCA DE P.","TIJUANA","R.F. MAGÓN 3","10:00",R.drawable.volleyball,"JORNADA 2"));
         //JORNADA3
         Partido.add(new Clase_futbol("CD. MADERO","PACHUCA","IT OAXACA","09:00",R.drawable.volleyball,"JORNADA 3"));
         Partido.add(new Clase_futbol("OAXACA","CELAYA","IT OAXACA","10:00",R.drawable.volleyball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("LA LAGUNA","COATZACOALCOS","LA SALLE","09:00",R.drawable.volleyball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD. GUZMÁN","PUEBLA","LA SALLE","10:00",R.drawable.volleyball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("LA LAGUNA","COATZACOALCOS","R.F. MAGÓN 1","09:00",R.drawable.volleyball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. GUZMÁN","PUEBLA","R.F. MAGÓN 1","10:00",R.drawable.volleyball,"JORNADA 3"));
         Partido.add(new Clase_futbol("QUERETARO","CANCÚN","URSE","09:00",R.drawable.volleyball,"JORNADA 3"));
         Partido.add(new Clase_futbol("GUASAVE","DURANGO","URSE","10:00",R.drawable.volleyball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD. ALTAMIRANO","TIJUANA","UABJO","09:00",R.drawable.volleyball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("POZA RICA","CUENCA DE P.","UABJO","10:00",R.drawable.volleyball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. ALTAMIRANO","TIJUANA","R.F. MAGÓN 3","09:00",R.drawable.volleyball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("POZA RICA","CUENCA DE P.","R.F. MAGÓN 3","10:00",R.drawable.volleyball,"JORNADA 3"));
 
     }
 

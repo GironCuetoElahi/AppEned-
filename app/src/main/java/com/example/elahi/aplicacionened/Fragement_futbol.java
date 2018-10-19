@@ -26,6 +26,7 @@ public class Fragement_futbol extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragement_futbol, container, false);
+        Partido.clear();
         Partido();
         PartidoView();
         return view;
@@ -118,7 +119,7 @@ public class Fragement_futbol extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-      Partido.clear();
+
     }
 
     @Override

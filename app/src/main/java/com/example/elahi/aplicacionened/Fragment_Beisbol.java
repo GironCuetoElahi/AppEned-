@@ -33,30 +33,30 @@ public class Fragment_Beisbol extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","E. VASCON","09:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","E. VASCON","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
         Partido.add(new Clase_futbol("COMALCALCO","HUATABAMPO","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 1"));
         Partido.add(new Clase_futbol("URUAPAN","MAZATLAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","ISTMO","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("QUERÈTARO","VERACRUZ","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","ISTMO","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("QUERÈTARO","VERACRUZ","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 1"));
         Partido.add(new Clase_futbol("OAXACA","AGUASCALIENTES","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 1"));
         Partido.add(new Clase_futbol("PABELLON DE A.","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 1"));
         //JORNADA2
-        Partido.add(new Clase_futbol("PUEBLA","MÉRIDA","E. VASCON","09:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ATITALAQUIA","SALTILLO","E. VASCON","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("PUEBLA","MÉRIDA","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ATITALAQUIA","SALTILLO","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 2"));
         Partido.add(new Clase_futbol("COMALCALCO","MAZATLÁN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 2"));
         Partido.add(new Clase_futbol("HUATABAMPO","URUAPAN","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","VERACRUZ","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ISTMO","QUERÉTARO","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","VERACRUZ","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ISTMO","QUERÉTARO","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 2"));
         Partido.add(new Clase_futbol("OAXACA","PABELLON DE A.","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 2"));
         Partido.add(new Clase_futbol("AGUASCALIENTES","CD. CUAUHTÉMOC","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 2"));
         //JORNADA3
-        Partido.add(new Clase_futbol("PUEBLA","SALTILLO","E. VASCON","09:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("MÉRIDA","ATITALAQUIA","E. VASCON","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("PUEBLA","SALTILLO","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("MÉRIDA","ATITALAQUIA","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("COMALCALCO","URUAPAN","A. A. HARP","09:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("MAZATLÁN","HUATABAMPO","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("NUEVO LAREDO","QUERÉTARO","SN BARTOLO","09:00",R.drawable.baseball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO","12:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("NUEVO LAREDO","QUERÉTARO","SN BARTOLO 2","09:00",R.drawable.baseball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("OAXACA","CD. CUAUHTEMOC","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("PABELLON DE A.","AGUASCALIENTES","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 3"));
     }

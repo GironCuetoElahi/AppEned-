@@ -35,32 +35,32 @@ public class Fragment_Voleibol_playa extends Fragment {
 
     private void Partido(){
         //JORNADA 1
-        Partido.add(new Clase_futbol("ITSOEH","DURANGO","CAPFCE","11:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("COATZACOALCOS","CD. MADERO","CAPFCE","09:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("HERMOSILLO","CANCÚN","CAPFCE","10:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("OAXACA","COALCOMÁN","CAPFCE","08:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TUXTEPEC","LAZARO CARDENAS","CAPFCE","12:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("BOCA DEL RIO","TEPIC","CAPFCE","13:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TEHUACAN","ZACATECAS","CAPFCE","14:00",R.drawable.playa,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. GUZMAN","TOLUCA","CAPFCE","15:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("ITSOEH","DURANGO","R. DEL ATOYAC","11:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("COATZACOALCOS","CD. MADERO","R. DEL ATOYAC","09:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("HERMOSILLO","CANCÚN","R. DEL ATOYAC","10:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("OAXACA","COALCOMÁN","R. DEL ATOYAC","08:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TUXTEPEC","LAZARO CARDENAS","R. DEL ATOYAC","12:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("BOCA DEL RIO","TEPIC","R. DEL ATOYAC","13:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TEHUACAN","ZACATECAS","R. DEL ATOYAC","14:00",R.drawable.playa,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","TOLUCA","R. DEL ATOYAC","15:00",R.drawable.playa,"JORNADA 1"));
         //JORNADA 2
-        Partido.add(new Clase_futbol("ITSOEH","CD. MADERO","CAPFCE","11:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("DURANGO","COATZACOALCOS","CAPFCE","09:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("HERMOSILLO","COALCOMÁN","CAPFCE","10:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CANCÚN","OAXACA","CAPFCE","08:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TUXTEPEC","TEPIC","CAPFCE","12:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("LAZARO CARDENAS","BOCA DEL RIO","CAPFCE","13:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TEHUACAN","TOLUCA","CAPFCE","14:00",R.drawable.playa,"JORNADA 2"));
-        Partido.add(new Clase_futbol("ZACATECAS","CD. GUZMÁN","CAPFCE","15:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ITSOEH","CD. MADERO","R. DEL ATOYAC","11:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("DURANGO","COATZACOALCOS","R. DEL ATOYAC","09:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("HERMOSILLO","COALCOMÁN","R. DEL ATOYAC","10:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CANCÚN","OAXACA","R. DEL ATOYAC","08:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TUXTEPEC","TEPIC","R. DEL ATOYAC","12:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("LAZARO CARDENAS","BOCA DEL RIO","R. DEL ATOYAC","13:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TEHUACAN","TOLUCA","R. DEL ATOYAC","14:00",R.drawable.playa,"JORNADA 2"));
+        Partido.add(new Clase_futbol("ZACATECAS","CD. GUZMÁN","R. DEL ATOYAC","15:00",R.drawable.playa,"JORNADA 2"));
         //JORNADA 3
-        Partido.add(new Clase_futbol("ITSOEH","COATZACOALCOS","CAPFCE","09:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD. MADERO","DURANGO","CAPFCE","10:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("HERMOSILLO","OAXACA","CAPFCE","08:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("COALCOMÁN","CANCÚN","CAPFCE","11:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TUXTEPEC","BOCA DEL RIO","CAPFCE","12:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TEPIC","LAZARO CÁRDENAS","CAPFCE","13:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TEHUACAN","CIUDAD GUZMAN","CAPFCE","14:00",R.drawable.playa,"JORNADA 3"));
-        Partido.add(new Clase_futbol("TOLUCA","ZACATECAS","CAPFCE","15:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("ITSOEH","COATZACOALCOS","R. DEL ATOYAC","09:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. MADERO","DURANGO","R. DEL ATOYAC","10:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("HERMOSILLO","OAXACA","R. DEL ATOYAC","08:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("COALCOMÁN","CANCÚN","R. DEL ATOYAC","11:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TUXTEPEC","BOCA DEL RIO","R. DEL ATOYAC","12:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TEPIC","LAZARO CÁRDENAS","R. DEL ATOYAC","13:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TEHUACAN","CIUDAD GUZMAN","R. DEL ATOYAC","14:00",R.drawable.playa,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TOLUCA","ZACATECAS","R. DEL ATOYAC","15:00",R.drawable.playa,"JORNADA 3"));
 
 
     }

@@ -5,12 +5,10 @@ import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TableLayout;
 
 public class Calendario extends Fragment {
     private TabLayout tabLayout;
@@ -39,8 +37,8 @@ public class Calendario extends Fragment {
         adapter.addFragment(new Fragment_Voleibol_playa(),"Voleibol Playa");
         adapter.addFragment(new Fragment_Voleibol_playa_Femenil(),"Voleibol Playa Femenil");
         adapter.addFragment(new Fragment_Beisbol(), "Béisbol");
-        adapter.addFragment(new Fragment_Ajedrez(),"Sóftbol");
-        //adapter.addFragment(new Fragment_Natacion(),"Natación");
+        adapter.addFragment(new Fragment_Softbol(),"Sóftbol");
+        adapter.addFragment(new Fragment_Ajedrez(),"Ajedrez");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
         return view;

@@ -20,7 +20,6 @@ public class Fragment_Basquetbol extends Fragment {
     private List<Clase_futbol> Partido = new ArrayList<Clase_futbol>();
     View view;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -35,28 +34,28 @@ public class Fragment_Basquetbol extends Fragment {
         //JORNADA1
         Partido.add(new Clase_futbol("TUXTEPEC","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("NUEVO LAREDO","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. GUZMAN","TUXTLA GTZ","LA SALLE","16:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. MADERO","NOGALES","LA SALLE","20:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","CANCÚN","UABJO","16:00",R.drawable.basketball,"JORNADA 1"));
-        Partido.add(new Clase_futbol("TEPIC","VERACRUZ","UABJO","20:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","TUXTLA GTZ","CRENO","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. MADERO","NOGALES","CRENO","20:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","CANCÚN","R F MAGÓN","16:00",R.drawable.basketball,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TEPIC","VERACRUZ","R F MAGÓN","20:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("TACÁMBARO","URUAPAN","URSE","16:00",R.drawable.basketball,"JORNADA 1"));
         Partido.add(new Clase_futbol("PUEBLA","TOLUCA","URSE","20:00",R.drawable.basketball,"JORNADA 1"));
         //JORNADA2
         Partido.add(new Clase_futbol("TUXTEPEC","ORIENTE EDO HGO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("NUEVO LAREDO","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD. GUZMAN","NOGALES","LA SALLE","16:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TUXTLA GTZ.","CD. MADERO","LA SALLE","20:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","VERACRUZ","UABJO","16:00",R.drawable.basketball,"JORNADA 2"));
-        Partido.add(new Clase_futbol("CANCÚN","TEPIC","UABJO","20:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","NOGALES","CRENO","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TUXTLA GTZ.","CD. MADERO","CRENO","20:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","VERACRUZ","R F MAGÓN","16:00",R.drawable.basketball,"JORNADA 2"));
+        Partido.add(new Clase_futbol("CANCÚN","TEPIC","R F MAGÓN","20:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("TACÁMBARO","TOLUCA","URSE","16:00",R.drawable.basketball,"JORNADA 2"));
         Partido.add(new Clase_futbol("URUAPAN","PUEBLA","URSE","20:00",R.drawable.basketball,"JORNADA 2"));
         //JORNADA3
         Partido.add(new Clase_futbol("TUXTEPEC","NUEVO LAREDO","IT OAXACA","20:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("ORIENTE EDO HGO","OAXACA","IT OAXACA","16:00",R.drawable.basketball,"JORNADA "));
-        Partido.add(new Clase_futbol("CD. GUZMAN","CD. MADERO","LA SALLE","16:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("NOGALES","TUXTLA GTZ.","LA SALLE","20:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","TEPIC","UABJO","16:00",R.drawable.basketball,"JORNADA 3"));
-        Partido.add(new Clase_futbol("VERACRUZ","CANCÚN","UABJO","20:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. GUZMAN","CD. MADERO","CRENO","16:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("NOGALES","TUXTLA GTZ.","CRENO","20:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CD. CUAUTHÉMOC","TEPIC","R F MAGÓN","16:00",R.drawable.basketball,"JORNADA 3"));
+        Partido.add(new Clase_futbol("VERACRUZ","CANCÚN","R F MAGÓN","20:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("TACÁMBARO","PUEBLA","URSE","16:00",R.drawable.basketball,"JORNADA 3"));
         Partido.add(new Clase_futbol("TOLUCA","URUAPAN","URSE","20:00",R.drawable.basketball,"JORNADA 3"));
     }

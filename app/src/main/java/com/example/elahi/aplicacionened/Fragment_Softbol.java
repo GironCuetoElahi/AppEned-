@@ -15,15 +15,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class Fragment_Ajedrez extends Fragment {
+/**
+ * A simple {@link Fragment} subclass.
+ */
+public class Fragment_Softbol extends Fragment {
     private List<Clase_futbol> Partido=new ArrayList<Clase_futbol>();
-    View view;
+        View view;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        view = inflater.inflate(R.layout.fragment_ajedrez2, container, false);
+        view = inflater.inflate(R.layout.fragment__ajedrez, container, false);
         Partido();
         PartidoView();
         return view;
@@ -31,17 +34,17 @@ public class Fragment_Ajedrez extends Fragment {
 
     private void Partido(){
         //JORNADA1
-        Partido.add(new Clase_futbol("JUNTA PREVIA","MEXICALI","CENTRO DE INFORMACIÓN","DOMINGO 13:00",R.drawable.strategy,"JORNADA 1"));
-        Partido.add(new Clase_futbol("PRIMERA RONDA","POZA RICA","CENTRO DE INFORMACIÓN","LUNES 09:00",R.drawable.strategy,"JORNADA 1"));
+        Partido.add(new Clase_futbol("MERIDA","MEXICALI","LA SALLE","09:00",R.drawable.softbal,"JORNADA 1"));
+        Partido.add(new Clase_futbol("PUEBLA","POZA RICA","LA SALLE","12:00",R.drawable.softbal,"JORNADA 1"));
 
         //JORNADA2
-        Partido.add(new Clase_futbol("SEGUNDA RONDA","POZA RICA","CENTRO DE INFORMACIÓN","LUNES 15:00",R.drawable.strategy,"JORNADA 2"));
-        Partido.add(new Clase_futbol("TERCERA RONDA","PUEBLA","CENTRO DE INFORMACIÓN","MARTES 09:00",R.drawable.strategy,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MERIDA","POZA RICA","LA SALLE","09:00",R.drawable.softbal,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MEXICALI","PUEBLA","LA SALLE","12:00",R.drawable.softbal,"JORNADA 2"));
 
         //JORNADA3
-        Partido.add(new Clase_futbol("CUARTA RONDA","PUEBLA","CENTRO DE INFORMACIÓN","MIERCOLES 09:00",R.drawable.strategy,"JORNADA 3"));
-        Partido.add(new Clase_futbol("QUINTA RONDA","MEXICALI","CENTRO DE INFORMACIÓN","JUEVES 09:00",R.drawable.strategy,"JORNADA 3"));
-        Partido.add(new Clase_futbol("SEXTA RONDA","MEXICALI","CENTRO DE INFORMACIÓN","VIERNES 09:00",R.drawable.strategy,"JORNADA 3"));
+        Partido.add(new Clase_futbol("MERIDA","PUEBLA","LA SALLE","09:00",R.drawable.softbal,"JORNADA 3"));
+        Partido.add(new Clase_futbol("POZA RICA","MEXICALI","LA SALLE","12:00",R.drawable.softbal,"JORNADA 3"));
+
 
     }
 
@@ -53,34 +56,34 @@ public class Fragment_Ajedrez extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view_ajedrez,Partido);
+            super(getActivity(), R.layout.item_view_softbol,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
-            Fragment_Ajedrez.ViewHolder holder = null;
+            Fragment_Softbol.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view_ajedrez, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view_softbol, parent,false);
 
-                holder = new Fragment_Ajedrez.ViewHolder();
+                holder = new Fragment_Softbol.ViewHolder();
 
                 holder.imageView = (ImageView) itemView.findViewById(R.id.logo) ;
                 holder.Equipo1=(TextView) itemView.findViewById(R.id.Equipo1) ;
-                holder.Lugar=(TextView) itemView.findViewById(R.id.sede);
+                holder.Equipo2=(TextView) itemView.findViewById(R.id.Equipo2);
                 holder.Horario=(TextView) itemView.findViewById(R.id.horario);
-
+                holder.Jornada=(TextView) itemView.findViewById(R.id.jornada);
                 itemView.setTag(holder);}
 
             else
-                holder = (Fragment_Ajedrez.ViewHolder) itemView.getTag();
+                holder = (Fragment_Softbol.ViewHolder) itemView.getTag();
 
             Clase_futbol CurrentPartido= Partido.get(position);
 
             holder.imageView.setImageResource(CurrentPartido.getImagen());
             holder.Equipo1.setText(CurrentPartido.getEquipo1());
-            holder.Lugar.setText(CurrentPartido.getSede());
+            holder.Equipo2.setText(CurrentPartido.getEquipo2());
             holder.Horario.setText(CurrentPartido.getHorario());
-
+            holder.Jornada.setText(CurrentPartido.getJornada());
 
             return itemView;
         }
@@ -90,8 +93,9 @@ public class Fragment_Ajedrez extends Fragment {
     static class ViewHolder{
         ImageView imageView;
         TextView Equipo1;
+        TextView Equipo2;
         TextView Horario;
-        TextView Lugar;
+        TextView Jornada;
     }
 
     @Override
