@@ -8,6 +8,8 @@ public class Clase_futbol {
     String Horario;
     String Jornada;
 
+
+
     public Clase_futbol(String Equipo1, String Equipo2, String Sede, String Horario,int imagen, String Jornada){
         setImagen(imagen);
         setEquipo1(Equipo1);
