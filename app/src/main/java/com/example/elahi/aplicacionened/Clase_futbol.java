@@ -7,16 +7,21 @@ public class Clase_futbol {
     String Sede;
     String Horario;
     String Jornada;
+    String Res1;
+    String Res2;
 
 
 
-    public Clase_futbol(String Equipo1, String Equipo2, String Sede, String Horario,int imagen, String Jornada){
+    public Clase_futbol(String Equipo1, String Equipo2, String Sede, String Horario,int imagen, String Jornada, String res1, String res2){
         setImagen(imagen);
         setEquipo1(Equipo1);
         setEquipo2(Equipo2);
         setSede(Sede);
         setHorario(Horario);
         setJornada(Jornada);
+        setRes1(res1);
+        setRes2(res2);
+
     }
 
     public int getImagen() {
@@ -60,4 +65,20 @@ public class Clase_futbol {
     public void setHorario(String horario) { Horario = horario; }
 
     public void setJornada(String jornada) { Jornada = jornada; }
+
+    public String getRes1() {
+        return Res1;
+    }
+
+    public String getRes2() {
+        return Res2;
+    }
+
+    public void setRes1(String res1) {
+        Res1 = res1;
+    }
+
+    public void setRes2(String res2) {
+        Res2 = res2;
+    }
 }

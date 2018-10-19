@@ -27,11 +27,6 @@
                 android:id="@+id/nav_seguridad"
                 android:icon="@drawable/ic_seguridad"
                 android:title="Seguridad" />
-
-            <item
-                android:id="@+id/nav_manual"
-                android:icon="@drawable/ic_manual"
-                android:title="Manual de Usuario" />
         </menu>
     </item>
 

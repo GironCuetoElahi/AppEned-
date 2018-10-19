@@ -27,12 +27,11 @@ public class Fragment_Softbol extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment__ajedrez, container, false);
-        Partido();
         PartidoView();
         return view;
     }
 
-    private void Partido(){
+    /*private void Partido(){
         //JORNADA1
         Partido.add(new Clase_futbol("MERIDA","MEXICALI","LA SALLE","09:00",R.drawable.softbal,"JORNADA 1"));
         Partido.add(new Clase_futbol("PUEBLA","POZA RICA","LA SALLE","12:00",R.drawable.softbal,"JORNADA 1"));
@@ -46,7 +45,7 @@ public class Fragment_Softbol extends Fragment {
         Partido.add(new Clase_futbol("POZA RICA","MEXICALI","LA SALLE","12:00",R.drawable.softbal,"JORNADA 3"));
 
 
-    }
+    }*/
 
     private void PartidoView(){
         ArrayAdapter<Clase_futbol> adapter=new MyListAdapter();
@@ -72,6 +71,8 @@ public class Fragment_Softbol extends Fragment {
                 holder.Equipo2=(TextView) itemView.findViewById(R.id.Equipo2);
                 holder.Horario=(TextView) itemView.findViewById(R.id.horario);
                 holder.Jornada=(TextView) itemView.findViewById(R.id.jornada);
+                holder.Res1=(TextView) itemView.findViewById(R.id.res_equipo1);
+                holder.Res2=(TextView) itemView.findViewById(R.id.res_equipo2);
                 itemView.setTag(holder);}
 
             else
@@ -84,6 +85,8 @@ public class Fragment_Softbol extends Fragment {
             holder.Equipo2.setText(CurrentPartido.getEquipo2());
             holder.Horario.setText(CurrentPartido.getHorario());
             holder.Jornada.setText(CurrentPartido.getJornada());
+            holder.Res1.setText(CurrentPartido.getRes1());
+            holder.Res2.setText(CurrentPartido.getRes2());
 
             return itemView;
         }
@@ -96,6 +99,8 @@ public class Fragment_Softbol extends Fragment {
         TextView Equipo2;
         TextView Horario;
         TextView Jornada;
+        TextView Res1;
+        TextView Res2;
     }
 
     @Override

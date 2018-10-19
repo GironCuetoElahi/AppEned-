@@ -1,6 +1,10 @@
 package com.example.elahi.aplicacionened;
 
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -18,6 +22,14 @@ import com.example.elahi.aplicacionened.data.models.Partidos;
 import com.example.elahi.aplicacionened.data.remote.APIService;
 import com.example.elahi.aplicacionened.data.remote.ApiUtils;
 
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -28,9 +40,21 @@ import retrofit2.Response;
 
 
 public class Fragement_futbol extends Fragment {
+
     private APIService mAPIService;
 
     private List<Clase_futbol> Partido=new ArrayList<Clase_futbol>();
+
+        //private List<Clase_futbol> Partido=new ArrayList<Clase_futbol>();
+
+    public static String text1;
+    public static String text2;
+    public static String sup1;
+    public static String sup2;
+    public static String text5;
+    public static String text6;
+    private static String DEBUG_TAG;
+
         View view;
 
 
@@ -44,14 +68,18 @@ public class Fragement_futbol extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragement_futbol, container, false);
+
         mAPIService = ApiUtils.getAPIService();
         Partido.clear();
         Partido();
+
+        PartidoView();
 
         return view;
     }
 
     private void Partido(){
+
 
         Calendar fecha = Calendar.getInstance();
         // int año = fecha.get(Calendar.YEAR);
@@ -111,6 +139,33 @@ public class Fragement_futbol extends Fragment {
 
 
 
+        //JORNADA1
+        /*Partido.add(new Clase_futbol("CELAYA","TEPIC","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CD GUZMAN","COMALCALCO","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","VERACRUZ","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("LA LAGUNA","TOLUCA","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","SIERRA NTE PUEBLA","MRCI","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("TUXTEPEC","DURANGO","MRCI","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("MERIDA","MATEHUALA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 1"));
+        Partido.add(new Clase_futbol("CUAUTLA","OAXACA","IT OAXACA","10:00",R.drawable.noticiafut,"JORNADA 1"));
+        //JORNADA2
+        Partido.add(new Clase_futbol("CELAYA","COMALCALCO","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TEPIC","CD. GUZMAN","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","TOLUCA","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("VERACRUZ","LA LAGUNA","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","DURANGO","MRCI","10:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("SIERRA NTE PUEBLA","TUXTEPEC","MRCI","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MERIDA","OAXACA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        Partido.add(new Clase_futbol("MATEHUALA","CUAUTLA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 2"));
+        //JORNADA3
+        Partido.add(new Clase_futbol("CELAYA","CD. GUZMAN","LA SALLE","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("COMALCALCO","TEPIC","LA SALLE","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TLALNEPANTLA","LA LAGUNA","NAZARENO","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("TOLUCA","VERACRUZ","NAZARENO","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("HUATABUAMPO","TUXTEPEC","MRCI","10:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("DURANGO","SIERRA NTE PUEBLA","MRCI","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("CUAUTLA","MÉRIDA","IT OAXACA","14:00",R.drawable.noticiafut,"JORNADA 3"));
+        Partido.add(new Clase_futbol("OAXACA","MATEHUALA","IT OAXACA","10:00",R.drawable.noticiafut,"JORNADA 3"));*/
     }
 
      private void PartidoView(){
@@ -138,7 +193,9 @@ public class Fragement_futbol extends Fragment {
             holder.Sede=(TextView) itemView.findViewById(R.id.sede) ;
             holder.Horario=(TextView) itemView.findViewById(R.id.horario);
             holder.Jornada=(TextView) itemView.findViewById(R.id.jornada);
-            itemView.setTag(holder);}
+            holder.Res1=(TextView) itemView.findViewById(R.id.res_equipo1);
+            holder.Res2=(TextView) itemView.findViewById(R.id.res_equipo2);
+                itemView.setTag(holder);}
 
             else
                 holder = (ViewHolder) itemView.getTag();
@@ -151,6 +208,8 @@ public class Fragement_futbol extends Fragment {
             holder.Sede.setText(CurrentPartido.getSede());
             holder.Horario.setText(CurrentPartido.getHorario());
             holder.Jornada.setText(CurrentPartido.getJornada());
+            holder.Res1.setText(CurrentPartido.getRes1());
+            holder.Res2.setText(CurrentPartido.getRes2());
 
             return itemView;
         }
@@ -164,23 +223,8 @@ public class Fragement_futbol extends Fragment {
         TextView Sede;
         TextView Horario;
         TextView Jornada;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
+        TextView Res1;
+        TextView Res2;
 
     }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-    }
-
-
 }

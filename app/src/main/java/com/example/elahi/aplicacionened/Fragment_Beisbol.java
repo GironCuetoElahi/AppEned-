@@ -26,12 +26,11 @@ public class Fragment_Beisbol extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view =inflater.inflate(R.layout.fragment__beisbol, container, false);
-        Partido();
         PartidoView();
         return view;
     }
 
-    private void Partido(){
+   /* private void Partido(){
         //JORNADA1
         Partido.add(new Clase_futbol("PUEBLA","ATITALAQUIA","SN BARTOLO 1","09:00",R.drawable.baseball,"JORNADA 1"));
         Partido.add(new Clase_futbol("SALTILLO","MÉRIDA","A. A. HARP","12:00",R.drawable.baseball,"JORNADA 1"));
@@ -59,7 +58,7 @@ public class Fragment_Beisbol extends Fragment {
         Partido.add(new Clase_futbol("VERACRUZ","ISTMO","SN BARTOLO 2","12:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("OAXACA","CD. CUAUHTEMOC","IT OAXACA","12:00",R.drawable.baseball,"JORNADA 3"));
         Partido.add(new Clase_futbol("PABELLON DE A.","AGUASCALIENTES","IT OAXACA","09:00",R.drawable.baseball,"JORNADA 3"));
-    }
+    }*/
 
     private void PartidoView(){
         ArrayAdapter<Clase_futbol> adapter=new MyListAdapter();
@@ -86,6 +85,8 @@ public class Fragment_Beisbol extends Fragment {
                 holder.Sede=(TextView) itemView.findViewById(R.id.sede) ;
                 holder.Horario=(TextView) itemView.findViewById(R.id.horario);
                 holder.Jornada=(TextView)itemView.findViewById((R.id.jornada));
+                holder.Res1=(TextView) itemView.findViewById(R.id.res_equipo1);
+                holder.Res2=(TextView) itemView.findViewById(R.id.res_equipo2);
                 itemView.setTag(holder);}
 
             else
@@ -99,6 +100,8 @@ public class Fragment_Beisbol extends Fragment {
             holder.Sede.setText(CurrentPartido.getSede());
             holder.Horario.setText(CurrentPartido.getHorario());
             holder.Jornada.setText(CurrentPartido.getJornada());
+            holder.Res1.setText(CurrentPartido.getRes1());
+            holder.Res2.setText(CurrentPartido.getRes2());
 
             return itemView;
         }
@@ -112,6 +115,8 @@ public class Fragment_Beisbol extends Fragment {
         TextView Sede;
         TextView Horario;
         TextView Jornada;
+        TextView Res1;
+        TextView Res2;
     }
 
     @Override

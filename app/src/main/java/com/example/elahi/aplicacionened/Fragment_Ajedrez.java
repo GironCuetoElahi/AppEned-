@@ -24,12 +24,12 @@ public class Fragment_Ajedrez extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_ajedrez2, container, false);
-        Partido();
+
         PartidoView();
         return view;
     }
 
-    private void Partido(){
+   /* private void Partido(){
         //JORNADA1
         Partido.add(new Clase_futbol("JUNTA PREVIA","MEXICALI","CENTRO DE INFORMACIÓN","DOMINGO 13:00",R.drawable.strategy,"JORNADA 1"));
         Partido.add(new Clase_futbol("PRIMERA RONDA","POZA RICA","CENTRO DE INFORMACIÓN","LUNES 09:00",R.drawable.strategy,"JORNADA 1"));
@@ -43,7 +43,7 @@ public class Fragment_Ajedrez extends Fragment {
         Partido.add(new Clase_futbol("QUINTA RONDA","MEXICALI","CENTRO DE INFORMACIÓN","JUEVES 09:00",R.drawable.strategy,"JORNADA 3"));
         Partido.add(new Clase_futbol("SEXTA RONDA","MEXICALI","CENTRO DE INFORMACIÓN","VIERNES 09:00",R.drawable.strategy,"JORNADA 3"));
 
-    }
+    }*/
 
     private void PartidoView(){
         ArrayAdapter<Clase_futbol> adapter=new MyListAdapter();

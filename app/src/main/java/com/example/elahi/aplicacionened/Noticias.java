@@ -1,7 +1,5 @@
 package com.example.elahi.aplicacionened;
 
-
-import android.app.Activity;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -16,21 +14,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import android.widget.Toast;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
-
 
 
 public class Noticias extends Fragment {
@@ -43,43 +34,32 @@ public class Noticias extends Fragment {
     public static String text6;
 
     private static List<Clase_noticia> Noticia=new ArrayList<Clase_noticia>();
-    View view;
-    private String DEBUG_TAG;
 
+    View view;
+    private static String DEBUG_TAG;
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         buscar();
     }
 
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_noticias, container, false);
-        if(isConected(this.getContext())!=true){
-            Toast.makeText(getContext(),"Error en conectarse a Red",Toast.LENGTH_SHORT).show();
-        }else{
-            Toast.makeText(getContext(),"Cargando Noticias",Toast.LENGTH_SHORT).show();
-            buscar();
-            NoticiaView();
-        }
+        NoticiaView();
         return view;
-
     }
 
     public static void imprime(String aux) {
         String[] parts = aux.split(";");
         Noticia.clear();
-
         for(int i=0;i<parts.length-1;i++){
             if (!parts[i+1].equals("")) {
                 String[] parts2=parts[i].split("&");
                 sup1=parts2[0];
                 sup2=parts2[1];
-                Log.i("Datos",""+parts2[0]+parts2[1]);
                 Noticia(sup1,sup2);
             }
         }
@@ -141,7 +121,7 @@ public class Noticias extends Fragment {
             // Inicia la consulta
             conn.connect();
             int response = conn.getResponseCode();
-            Log.d( myurl,"La respuesta es: " + response);
+            Log.d( DEBUG_TAG,"La respuesta es: " + response);
             is = conn.getInputStream();
             //Para descargar la página web completa
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, "UTF-8"));
@@ -162,15 +142,10 @@ public class Noticias extends Fragment {
         Noticia.add(new Clase_noticia (encab,texto,R.drawable.news));
     }
 
-    private static void Noticia(){
-        Noticia.add(new Clase_noticia (sup1+"",sup2+"",R.drawable.news));
-    }
-
     private void NoticiaView(){
         ArrayAdapter<Clase_noticia> adapter=new MyListAdapter();
         ListView list=(ListView) view.findViewById(R.id.listview);
         list.setAdapter(adapter);
-
     }
 
     private class MyListAdapter extends ArrayAdapter<Clase_noticia>{
@@ -190,17 +165,16 @@ public class Noticias extends Fragment {
                 holder.Texto=(TextView) itemView.findViewById(R.id.titulo) ;
                 holder.Encabezado=(TextView) itemView.findViewById(R.id.textView);
 
-                itemView.setTag(holder);
-            }
+                itemView.setTag(holder);}
 
-            else {
+            else
                 holder = (ViewHolder) itemView.getTag();
-            }
-            Clase_noticia CurrentPartido= Noticia.get(position);
 
-            holder.imageView.setImageResource(CurrentPartido.getImagen());
-            holder.Texto.setText(CurrentPartido.getTexto());
-            holder.Encabezado.setText(CurrentPartido.getEncabezado());
+            Clase_noticia CurrentNoticia= Noticia.get(position);
+
+            holder.imageView.setImageResource(CurrentNoticia.getImagen());
+            holder.Texto.setText(CurrentNoticia.getTexto());
+            holder.Encabezado.setText(CurrentNoticia.getEncabezado());
 
             return itemView;
         }
@@ -221,5 +195,6 @@ public class Noticias extends Fragment {
 
 
 }
+
 
 

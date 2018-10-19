@@ -7,32 +7,32 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="66dp"
-        android:layout_height="61dp"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="13dp"
         app:srcCompat="@drawable/futbol" />
 
     <TextView
         android:id="@+id/Equipo1"
-        android:layout_width="94dp"
-        android:layout_height="32dp"
+        android:layout_width="121dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="96dp"
+        android:layout_marginStart="93dp"
         android:layout_marginTop="21dp"
         android:text="TEC OAXACA"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/Equipo2"
-        android:layout_width="100dp"
-        android:layout_height="34dp"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/Equipo1"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="6dp"
         android:layout_marginBottom="-1dp"
         android:text="TEC CELAYA"
         android:textStyle="bold" />
@@ -71,4 +71,22 @@
         android:layout_alignStart="@+id/versus"
         android:layout_alignTop="@+id/sede"
         android:text="JORNADA 1" />
+
+    <TextView
+        android:id="@+id/res_equipo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Equipo1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="122dp"
+        android:text="1" />
+
+    <TextView
+        android:id="@+id/res_equipo2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Equipo2"
+        android:layout_marginTop="--1dp"
+        android:layout_toStartOf="@+id/horario"
+        android:text="0" />
 </RelativeLayout>
