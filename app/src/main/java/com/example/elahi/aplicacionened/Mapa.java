@@ -1,14 +1,39 @@
 package com.example.elahi.aplicacionened;
 
 
+import android.Manifest;
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
+import android.widget.ImageView;
 
+import com.example.elahi.aplicacionened.models.PlaceInfo;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
+import com.google.android.gms.common.GooglePlayServicesRepairableException;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.common.api.ResultCallback;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.PendingResult;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.PlaceBuffer;
+import com.google.android.gms.location.places.Places;
+import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -16,34 +41,60 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.location.places.ui.PlacePicker;
 
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import android.support.v4.app.FragmentActivity;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Mapa extends Fragment implements OnMapReadyCallback {
+public class Mapa extends Fragment implements  OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener {
     SupportMapFragment mapFragment;
+    Double lat=0.0,lng=0.0;
+    Marker marcador;
+    private GoogleMap mMap;
+    private ImageView  mPlacePicker;
+    private static final int PLACE_PICKER_REQUEST = 1;
+    private static final String TAG = "MapActivity";
+    private GoogleApiClient mGoogleApiClient;
+    private PlaceInfo mPlace;
+
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View v= inflater.inflate(R.layout.fragment_mapa, container, false);
+       mPlacePicker = (ImageView) v.findViewById(R.id.place_picker);
        mapFragment= (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
        if (mapFragment == null){
            FragmentManager fm = getFragmentManager();
            FragmentTransaction ft= fm.beginTransaction();
            mapFragment= SupportMapFragment.newInstance();
            ft.replace(R.id.map, mapFragment).commit();
-       }
+    }
        mapFragment.getMapAsync(this);
        return v;
     }
 
     @Override
-    public void onMapReady(GoogleMap googleMap) {
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+
+
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        mMap =googleMap;
+        float zoomLevel = 15.5f;
         /*Ubicaciones*/
         // Posicionar el mapa en una localización y con un nivel de zoom
         LatLng brenamiel    = new LatLng(17.09531,-96.74963);
@@ -61,8 +112,8 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
         LatLng vinicio      = new LatLng(17.08915,-96.71062);
         LatLng depBrenamiel = new LatLng(17.10435,-96.75374);
         // Un zoom mayor que 13 hace que el emulador falle, pero un valor deseado para callejero es 17 aprox.
-        float zoom = 13;
-        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ito, zoom));
+        //float zoom = 13;
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(ito, zoomLevel));
         // Colocar un marcador en la misma posición
         googleMap.addMarker(new MarkerOptions().position(brenamiel)
                 .title("Canchas Brenamiel")
@@ -270,6 +321,8 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
                 .icon(BitmapDescriptorFactory.fromResource(R.mipmap.comedor))
                 .snippet("Quinta el Tremolin")
         );
+        miUbicacion();
+
 
         // Más opciones para el marcador en:
         // https://developers.google.com/maps/documentation/android/marker
@@ -277,4 +330,60 @@ public class Mapa extends Fragment implements OnMapReadyCallback {
         // Otras configuraciones pueden realizarse a través de UiSettings
         // UiSettings settings = getMap().getUiSettings();
     }
+
+    private void agregarMarcador(double lat, double lng ){
+        LatLng coordenadas = new LatLng(lat, lng);
+        CameraUpdate miUbicacion=CameraUpdateFactory.newLatLngZoom(coordenadas,16);
+        if(marcador!=null)marcador.remove();
+        marcador = mMap.addMarker(
+                new MarkerOptions().position(coordenadas)
+                        .title("Tú posición")
+                        .icon(BitmapDescriptorFactory.fromResource(R.drawable.placeholder))        );
+
+        mMap.animateCamera(miUbicacion);
+    }
+
+    private  void actualizarUbicacion(Location location){
+        if(location!=null){
+            lat=location.getLatitude();
+            lng= location.getLongitude();
+            agregarMarcador(lat,lng);
+        }
+    }
+
+    LocationListener locationListener = new LocationListener() {
+        @Override
+        public void onLocationChanged(Location location) {
+            actualizarUbicacion(location);
+        }
+
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
+
+        }
+
+        @Override
+        public void onProviderEnabled(String s) {
+
+        }
+
+        @Override
+        public void onProviderDisabled(String s) {
+
+        }
+    };
+
+
+
+    private void miUbicacion(){
+        if(ActivityCompat.checkSelfPermission(getContext(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED){
+            return;
+        }
+        LocationManager locationManager = (LocationManager)getActivity().getSystemService(Context.LOCATION_SERVICE);
+        Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        actualizarUbicacion(location);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1500, 0, locationListener);
+    }
+
+
 }
