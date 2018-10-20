@@ -22,17 +22,13 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.ImageView;
 
-import com.example.elahi.aplicacionened.models.PlaceInfo;
+
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.PendingResult;
 import com.google.android.gms.common.api.ResultCallback;
 import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.common.api.PendingResult;
-import com.google.android.gms.location.places.Place;
-import com.google.android.gms.location.places.PlaceBuffer;
-import com.google.android.gms.location.places.Places;
 import com.google.android.gms.maps.CameraUpdate;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -43,7 +39,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.google.android.gms.location.places.ui.PlacePicker;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
@@ -57,13 +52,6 @@ public class Mapa extends Fragment implements  OnMapReadyCallback, GoogleApiClie
     Double lat=0.0,lng=0.0;
     Marker marcador;
     private GoogleMap mMap;
-    private ImageView  mPlacePicker;
-    private static final int PLACE_PICKER_REQUEST = 1;
-    private static final String TAG = "MapActivity";
-    private GoogleApiClient mGoogleApiClient;
-    private PlaceInfo mPlace;
-
-
 
 
     @Override
@@ -71,7 +59,6 @@ public class Mapa extends Fragment implements  OnMapReadyCallback, GoogleApiClie
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
        View v= inflater.inflate(R.layout.fragment_mapa, container, false);
-       mPlacePicker = (ImageView) v.findViewById(R.id.place_picker);
        mapFragment= (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
        if (mapFragment == null){
            FragmentManager fm = getFragmentManager();
