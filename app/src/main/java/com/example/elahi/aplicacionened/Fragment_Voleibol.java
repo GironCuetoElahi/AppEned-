@@ -42,7 +42,7 @@ public class Fragment_Voleibol extends Fragment {
         view =inflater.inflate(R.layout.fragment__voleibol, container, false);
 
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+        //Partido.clear();
         Partido();
 
         PartidoView();
@@ -170,21 +170,6 @@ public class Fragment_Voleibol extends Fragment {
         TextView Jornada;
         TextView Res1;
         TextView Res2;
-    }
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Partido.clear();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
     }
 
 

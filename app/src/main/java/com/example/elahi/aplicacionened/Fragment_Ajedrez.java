@@ -42,7 +42,7 @@ public class Fragment_Ajedrez extends Fragment {
 
 
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+        //Partido.clear();
         Partido();
 
         PartidoView();
@@ -107,7 +107,7 @@ public class Fragment_Ajedrez extends Fragment {
                     final List<Ajedrez> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
 
-                        Partido.add(new Clase_futbol(parts.get(i).getRonda(),"MEXICALI",parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.noticiafut, act, "0", "" ));
+                        Partido.add(new Clase_futbol(parts.get(i).getRonda(),"MEXICALI",parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.strategy, act, "0", "" ));
                     }
                     PartidoView();
             }
@@ -167,22 +167,6 @@ public class Fragment_Ajedrez extends Fragment {
         TextView Lugar;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Partido.clear();
-    }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Partido.clear();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Partido.clear();
-    }
 
 }

@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.elahi.aplicacionened.data.models.PartidoModel;
 import com.example.elahi.aplicacionened.data.models.Partidos;
@@ -39,7 +40,7 @@ public class Fragment_Basquetbol extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment__basquetbol, container, false);
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+        //Partido.clear();
         Partido();
 
         PartidoView();
@@ -82,9 +83,8 @@ public class Fragment_Basquetbol extends Fragment {
 
                 Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+response.code());
                 Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+call.request());
-
+                Toast.makeText(getContext(), "Cargando Partidos...",Toast.LENGTH_SHORT).show();
                 if(response.body().getPartidos() != null) {
-
                     final List<PartidoModel> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
 
@@ -92,7 +92,7 @@ public class Fragment_Basquetbol extends Fragment {
                     }
                     PartidoView();
                 }else{
-                    //NOTHING
+                    Toast.makeText(getContext(), "No se pudieron cargar los datos...",Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -165,22 +165,6 @@ public class Fragment_Basquetbol extends Fragment {
         TextView Jornada;
         TextView Res1;
         TextView Res2;
-    }
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Partido.clear();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
     }
 
 

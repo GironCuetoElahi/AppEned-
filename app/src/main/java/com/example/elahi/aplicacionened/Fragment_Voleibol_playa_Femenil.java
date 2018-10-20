@@ -45,7 +45,7 @@ public class Fragment_Voleibol_playa_Femenil extends Fragment {
         view= inflater.inflate(R.layout.fragment__voleibol_playa__femenil, container, false);
 
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+        //Partido.clear();
         Partido();
 
         PartidoView();
@@ -172,21 +172,6 @@ public class Fragment_Voleibol_playa_Femenil extends Fragment {
         TextView Res1;
         TextView Res2;
 
-    }
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Partido.clear();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
     }
 
 
