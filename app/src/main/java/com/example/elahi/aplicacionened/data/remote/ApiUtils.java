@@ -4,7 +4,7 @@ public class ApiUtils {
 
     private ApiUtils() {}
 
-    public static final String BASE_URL = "http://192.168.2.224:3000/";
+    public static final String BASE_URL = "http://digiparkvm.duckdns.org/";
 
     public static APIService getAPIService() {
 
