@@ -11,7 +11,7 @@
 
 
    <ImageButton
-       android:id="@+id/imageButton3"
+       android:id="@+id/llamar_poli"
        android:layout_width="159dp"
        android:layout_height="161dp"
        android:layout_alignParentStart="true"
@@ -22,31 +22,31 @@
        android:src="@drawable/policeman2" />
 
    <ImageButton
-       android:id="@+id/imageButton4"
+       android:id="@+id/llamar_bomb"
        android:layout_width="164dp"
        android:layout_height="161dp"
        android:layout_alignParentEnd="true"
-       android:layout_alignTop="@+id/imageButton3"
-       android:layout_marginEnd="14dp"
+       android:layout_alignTop="@+id/llamar_poli"
+       android:layout_marginEnd="17dp"
        android:background="@drawable/detalle2"
        android:src="@drawable/firefighter2" />
 
    <ImageButton
-       android:id="@+id/imageButton5"
+       android:id="@+id/llamar_cruz"
        android:layout_width="159dp"
        android:layout_height="156dp"
        android:layout_alignParentBottom="true"
-       android:layout_alignStart="@+id/imageButton3"
+       android:layout_alignStart="@+id/llamar_poli"
        android:layout_marginBottom="84dp"
        android:background="@drawable/detalle3"
        android:src="@drawable/redcroise" />
 
    <ImageButton
-       android:id="@+id/imageButton6"
+       android:id="@+id/llamar_imss"
        android:layout_width="164dp"
        android:layout_height="157dp"
-       android:layout_alignStart="@+id/imageButton4"
-       android:layout_alignTop="@+id/imageButton5"
+       android:layout_alignStart="@+id/llamar_bomb"
+       android:layout_alignTop="@+id/llamar_cruz"
        android:background="@drawable/detalle"
        android:src="@drawable/ambulance" />
 </RelativeLayout>

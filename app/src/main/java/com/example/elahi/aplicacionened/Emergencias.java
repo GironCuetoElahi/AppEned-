@@ -23,7 +23,6 @@ import java.util.List;
 
 
 public class Emergencias extends Fragment {
-    private List<class_emergencia> Recurso = new ArrayList<class_emergencia>();
 
     View view;
 
@@ -32,13 +31,18 @@ public class Emergencias extends Fragment {
                              Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_emergencias, container, false);
+
+        llamarbomb();
+        llamarcruz();
+        llamarimss();
+        llamarpoli();
         return view;
     }
 
 
 
 
-    /*private void llamarpoli() {
+    private void llamarpoli() {
         ImageButton boton = (ImageButton) view.findViewById(R.id.llamar_poli);
 
         boton.setOnClickListener(new View.OnClickListener() {
@@ -51,18 +55,7 @@ public class Emergencias extends Fragment {
         });
     }
 
-    private void llamarprotec() {
-        ImageButton boton = (ImageButton) view.findViewById(R.id.llamar_protec);
 
-        boton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(Intent.ACTION_CALL);
-                i.setData(Uri.parse("tel:911"));
-                startActivity(i);
-            }
-        });
-    }
 
     private void llamarbomb() {
         ImageButton boton = (ImageButton) view.findViewById(R.id.llamar_bomb);
@@ -101,7 +94,7 @@ public class Emergencias extends Fragment {
                 startActivity(i);
             }
         });
-    }*/
+    }
 
 }
 
