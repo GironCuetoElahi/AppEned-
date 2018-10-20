@@ -29,7 +29,7 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RvVoleibolPlayaFemenil extends Fragment {
+public class RvSoftbol extends Fragment {
 
     private APIService mAPIService;
     private ArrayList<Clase_futbol> partidos=new ArrayList();
@@ -37,7 +37,7 @@ public class RvVoleibolPlayaFemenil extends Fragment {
     private PartidoAdapter partidoAdapter;
     private View v;
 
-    public RvVoleibolPlayaFemenil() {
+    public RvSoftbol() {
 
     }
     private void llenarPartidos(){
@@ -68,7 +68,7 @@ public class RvVoleibolPlayaFemenil extends Fragment {
         Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
         final String act= journal;
 
-        mAPIService.savePartidos("VOLEIBOL_PLAYA",jornadita,"F").enqueue(new Callback<Partidos>() {
+        mAPIService.savePartidos("SOFTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
             @Override
             public void onResponse(Call<Partidos> call, Response<Partidos> response) {
 
@@ -80,7 +80,7 @@ public class RvVoleibolPlayaFemenil extends Fragment {
                     final List<PartidoModel> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
 
-                        partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.playa, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
+                        partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.softbal, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
                     }
                     vistaPartidos();
 

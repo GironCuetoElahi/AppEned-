@@ -11,9 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.elahi.aplicacionened.adapter.AjedrezAdapter;
 import com.example.elahi.aplicacionened.adapter.PartidoAdapter;
+import com.example.elahi.aplicacionened.data.models.Ajedrez;
 import com.example.elahi.aplicacionened.data.models.PartidoModel;
 import com.example.elahi.aplicacionened.data.models.Partidos;
+import com.example.elahi.aplicacionened.data.models.PartidosAjedrez;
 import com.example.elahi.aplicacionened.data.remote.APIService;
 import com.example.elahi.aplicacionened.data.remote.ApiUtils;
 
@@ -29,15 +32,15 @@ import retrofit2.Response;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class RvVoleibolPlayaFemenil extends Fragment {
+public class RvAjedrez extends Fragment {
 
     private APIService mAPIService;
     private ArrayList<Clase_futbol> partidos=new ArrayList();
     private static final String TAG="FRAGMENT_FUTBOL";
-    private PartidoAdapter partidoAdapter;
+    private AjedrezAdapter ajedrezAdapter;
     private View v;
 
-    public RvVoleibolPlayaFemenil() {
+    public RvAjedrez() {
 
     }
     private void llenarPartidos(){
@@ -68,33 +71,21 @@ public class RvVoleibolPlayaFemenil extends Fragment {
         Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
         final String act= journal;
 
-        mAPIService.savePartidos("VOLEIBOL_PLAYA",jornadita,"F").enqueue(new Callback<Partidos>() {
+        mAPIService.savePartidosAjedrez("AJEDREZ","J1","F").enqueue(new Callback<PartidosAjedrez>() {
             @Override
-            public void onResponse(Call<Partidos> call, Response<Partidos> response) {
+            public void onResponse(Call<PartidosAjedrez> call, Response<PartidosAjedrez> response) {
+                //if(response.body().getPartidos() != null) {
+                Log.d(TAG, "Respuesta: "+ call.request());
+                final List<Ajedrez> parts = response.body().getPartidos();
+                for(int i=0; i < parts.size(); i++){
 
-                Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+response.code());
-                Log.d(TAG,"ESTO SERIA UN MILAGRO :  "+call.request());
-
-                if(response.body().getPartidos() != null) {
-
-                    final List<PartidoModel> parts = response.body().getPartidos();
-                    for(int i=0; i < parts.size(); i++){
-
-                        partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.playa, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
-                    }
-                    vistaPartidos();
-
-                }else{
-                    //NOTHING
+                    partidos.add(new Clase_futbol(parts.get(i).getRonda(),"MEXICALI",parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.strategy, act, "0", "" ));
                 }
-
-
+                vistaPartidos();
             }
-
             @Override
-            public void onFailure(Call<Partidos> call, Throwable t) {
-                Log.d(TAG,"NO");
-                Log.d(TAG,"NO"+t.getMessage());
+            public void onFailure(Call<PartidosAjedrez> call, Throwable t) {
+
             }
         });
     }
@@ -105,14 +96,14 @@ public class RvVoleibolPlayaFemenil extends Fragment {
         RecyclerView rvfutbol = v.findViewById(R.id.rvpartido);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        partidoAdapter = new PartidoAdapter(partidos,R.layout.cardview_deporte,getActivity());
+        ajedrezAdapter = new AjedrezAdapter(partidos,R.layout.cardview_ajedrez,getActivity());
         rvfutbol.setLayoutManager(linearLayoutManager);
-        rvfutbol.setAdapter(partidoAdapter);
+        rvfutbol.setAdapter(ajedrezAdapter);
     }
-    public static RvFutbol newInstance() {
+    public static RvAjedrez newInstance() {
 
         Bundle args = new Bundle();
-        RvFutbol fragment = new RvFutbol();
+        RvAjedrez fragment = new RvAjedrez();
         fragment.setArguments(args);
         return fragment;
     }
