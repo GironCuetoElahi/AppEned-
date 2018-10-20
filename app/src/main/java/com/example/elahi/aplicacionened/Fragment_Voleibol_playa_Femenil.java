@@ -122,14 +122,14 @@ public class Fragment_Voleibol_playa_Femenil extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view9,Partido);
+            super(getActivity(), R.layout.item_view,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
             Fragment_Voleibol_playa_Femenil.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view9, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view, parent,false);
 
                 holder = new Fragment_Voleibol_playa_Femenil.ViewHolder();
 

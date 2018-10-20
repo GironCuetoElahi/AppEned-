@@ -179,8 +179,10 @@ public class Fragement_futbol extends Fragment {
             holder.Sede.setText(CurrentPartido.getSede());
             holder.Horario.setText(CurrentPartido.getHorario());
             holder.Jornada.setText(CurrentPartido.getJornada());
-            holder.Res1.setText(CurrentPartido.getRes1());
-            holder.Res2.setText(CurrentPartido.getRes2());
+            holder.Res1.setText("1");
+            //CurrentPartido.getRes1();
+            //CurrentPartido.getRes2();
+            holder.Res2.setText("0");
 
             return itemView;
         }

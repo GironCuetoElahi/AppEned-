@@ -124,14 +124,14 @@ public class Fragment_futbol_femenil extends Fragment {
 
     private class MyListAdapter extends ArrayAdapter<Clase_futbol>{
         public MyListAdapter(){
-            super(getActivity(), R.layout.item_view5,Partido);
+            super(getActivity(), R.layout.item_view,Partido);
         }
 
         public View getView (int position, View convertView, ViewGroup parent){
             Fragment_futbol_femenil.ViewHolder holder = null;
             View itemView = convertView;
             if (itemView==null){
-                itemView=getLayoutInflater().inflate(R.layout.item_view5, parent,false);
+                itemView=getLayoutInflater().inflate(R.layout.item_view, parent,false);
 
                 holder = new Fragment_futbol_femenil.ViewHolder();
 
