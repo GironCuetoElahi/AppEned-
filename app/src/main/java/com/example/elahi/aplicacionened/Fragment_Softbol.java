@@ -96,7 +96,7 @@ public class Fragment_Softbol extends Fragment {
                     final List<PartidoModel> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
 
-                        Partido.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.noticiafut, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
+                        Partido.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.softbal, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
                     }
                     PartidoView();
                 }else{

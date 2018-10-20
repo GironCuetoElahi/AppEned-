@@ -15,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.example.elahi.aplicacionened.data.models.PartidoModel;
@@ -66,7 +67,6 @@ public class Fragement_futbol extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragement_futbol, container, false);
 
         mAPIService = ApiUtils.getAPIService();

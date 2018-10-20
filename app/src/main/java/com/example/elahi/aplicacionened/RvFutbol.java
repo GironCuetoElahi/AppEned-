@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.elahi.aplicacionened.adapter.PartidoAdapter;
 import com.example.elahi.aplicacionened.data.models.PartidoModel;
@@ -123,6 +124,8 @@ public class RvFutbol extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_rvfutbol, container, false);
+        Toast.makeText(getContext(), "Revisa tu conexion a internet", Toast.LENGTH_LONG);
+
         mAPIService = ApiUtils.getAPIService();
         //partidos.clear();
         llenarPartidos();

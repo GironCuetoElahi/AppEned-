@@ -80,7 +80,7 @@ public class RvVoleibolPlayaFemenil extends Fragment {
                     final List<PartidoModel> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
 
-                        partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.volleyball, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
+                        partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.playa, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
                     }
                     vistaPartidos();
 
