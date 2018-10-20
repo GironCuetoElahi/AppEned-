@@ -124,8 +124,9 @@ public class RvFutbol extends Fragment {
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_rvfutbol, container, false);
         mAPIService = ApiUtils.getAPIService();
-        partidos.clear();
+        //partidos.clear();
         llenarPartidos();
+        vistaPartidos();
         return v;
     }
 

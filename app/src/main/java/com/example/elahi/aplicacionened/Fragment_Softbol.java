@@ -46,7 +46,7 @@ public class Fragment_Softbol extends Fragment {
         view = inflater.inflate(R.layout.fragment__ajedrez, container, false);
 
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+       // Partido.clear();
         Partido();
 
         PartidoView();
@@ -171,22 +171,6 @@ public class Fragment_Softbol extends Fragment {
         TextView Res2;
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        Partido.clear();
-    }
 
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        Partido.clear();
-    }
-
-    @Override
-    public void onDetach() {
-        super.onDetach();
-        Partido.clear();
-    }
 
 }

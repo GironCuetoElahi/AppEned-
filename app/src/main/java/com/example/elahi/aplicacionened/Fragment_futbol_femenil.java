@@ -48,7 +48,7 @@ public class Fragment_futbol_femenil extends Fragment {
         // Inflate the layout for this fragment
         view= inflater.inflate(R.layout.fragment_futbol_femenil, container, false);
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+        //Partido.clear();
         Partido();
 
         return view;

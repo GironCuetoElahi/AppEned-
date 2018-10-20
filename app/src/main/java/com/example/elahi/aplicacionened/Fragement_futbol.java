@@ -70,7 +70,7 @@ public class Fragement_futbol extends Fragment {
         view = inflater.inflate(R.layout.fragement_futbol, container, false);
 
         mAPIService = ApiUtils.getAPIService();
-        Partido.clear();
+       // Partido.clear();
         Partido();
 
         PartidoView();
