@@ -34,7 +34,7 @@ public class Fragment_Voleibol_femenil extends Fragment {
     View view;
 
     private APIService mAPIService;
-    private static final String TAG="FRAGMENT_VOLEIBOL_FEMENIL";
+    private static final String TAG="VOLEIBOL_FEMENIL";
 
 
     @Override
@@ -82,7 +82,7 @@ public class Fragment_Voleibol_femenil extends Fragment {
         Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
         final String act= journal;
 
-        mAPIService.savePartidos("FUTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
+        mAPIService.savePartidos("VOLEIBOL_SALA",jornadita,"F").enqueue(new Callback<Partidos>() {
             @Override
             public void onResponse(Call<Partidos> call, Response<Partidos> response) {
 

@@ -3,6 +3,7 @@ package com.example.elahi.aplicacionened;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +12,27 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.elahi.aplicacionened.data.models.Ajedrez;
+import com.example.elahi.aplicacionened.data.models.PartidoModel;
+import com.example.elahi.aplicacionened.data.models.Partidos;
+import com.example.elahi.aplicacionened.data.models.PartidosAjedrez;
+import com.example.elahi.aplicacionened.data.remote.APIService;
+import com.example.elahi.aplicacionened.data.remote.ApiUtils;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 
 public class Fragment_Ajedrez extends Fragment {
     private List<Clase_futbol> Partido=new ArrayList<Clase_futbol>();
     View view;
+    private APIService mAPIService;
+    private static final String TAG="FRAGMENT_AJEDREZ";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -25,7 +40,13 @@ public class Fragment_Ajedrez extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_ajedrez2, container, false);
 
+
+        mAPIService = ApiUtils.getAPIService();
+        Partido.clear();
+        Partido();
+
         PartidoView();
+
         return view;
     }
 
@@ -44,6 +65,58 @@ public class Fragment_Ajedrez extends Fragment {
         Partido.add(new Clase_futbol("SEXTA RONDA","MEXICALI","CENTRO DE INFORMACIÓN","VIERNES 09:00",R.drawable.strategy,"JORNADA 3"));
 
     }*/
+
+
+
+
+    private void Partido(){
+
+
+        Calendar fecha = Calendar.getInstance();
+        // int año = fecha.get(Calendar.YEAR);
+        int mes = fecha.get(Calendar.MONTH) + 1;
+        int dia = fecha.get(Calendar.DAY_OF_MONTH);
+
+        String jornadita="";
+        String journal="";
+        if(dia==22 && mes==10 ){
+            jornadita = "J2";
+            journal="JORNADA 2";
+        }else if(dia==23 && mes==10 ){
+            jornadita = "J3";
+            journal="JORNADA 3";
+        }else if(dia==24 && mes==10 ){
+            jornadita = "S";
+            journal="SEMIFINAL";
+        }else if(dia==25 && mes==10 ){
+            jornadita = "F";
+            journal="FINAL";
+        } else {
+            jornadita = "J1";
+            journal="JORNADA 1";
+        }
+
+        Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
+        final String act= journal;
+
+        mAPIService.savePartidosAjedrez("AJEDREZ","J1","F").enqueue(new Callback<PartidosAjedrez>() {
+            @Override
+            public void onResponse(Call<PartidosAjedrez> call, Response<PartidosAjedrez> response) {
+                //if(response.body().getPartidos() != null) {
+                    Log.d(TAG, "Respuesta: "+ call.request());
+                    final List<Ajedrez> parts = response.body().getPartidos();
+                    for(int i=0; i < parts.size(); i++){
+
+                        Partido.add(new Clase_futbol(parts.get(i).getRonda(),"MEXICALI",parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.noticiafut, act, "0", "" ));
+                    }
+                    PartidoView();
+            }
+            @Override
+            public void onFailure(Call<PartidosAjedrez> call, Throwable t) {
+
+            }
+        });
+    }
 
     private void PartidoView(){
         ArrayAdapter<Clase_futbol> adapter=new MyListAdapter();

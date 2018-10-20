@@ -84,7 +84,7 @@ public class Fragment_Softbol extends Fragment {
         Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
         final String act= journal;
 
-        mAPIService.savePartidos("FUTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
+        mAPIService.savePartidos("SOFTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
             @Override
             public void onResponse(Call<Partidos> call, Response<Partidos> response) {
 

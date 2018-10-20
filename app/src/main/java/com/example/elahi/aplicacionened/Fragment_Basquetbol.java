@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.example.elahi.aplicacionened.data.models.PartidoModel;
 import com.example.elahi.aplicacionened.data.models.Partidos;
 import com.example.elahi.aplicacionened.data.remote.APIService;
+import com.example.elahi.aplicacionened.data.remote.ApiUtils;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -29,7 +30,7 @@ public class Fragment_Basquetbol extends Fragment {
     private List<Clase_futbol> Partido = new ArrayList<Clase_futbol>();
     View view;
     private APIService mAPIService;
-    private static final String TAG="FRAGMENT_FUTBOL";
+    private static final String TAG="FRAGMENT_BASQUETBOL";
 
 
     @Override
@@ -37,6 +38,10 @@ public class Fragment_Basquetbol extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_fragment__basquetbol, container, false);
+        mAPIService = ApiUtils.getAPIService();
+        Partido.clear();
+        Partido();
+
         PartidoView();
         return view;
     }
@@ -71,7 +76,7 @@ public class Fragment_Basquetbol extends Fragment {
         Log.d(TAG,"DIA :  "+ dia + " MES"+ mes);
         final String act= journal;
 
-        mAPIService.savePartidos("FUTBOL",jornadita,"F").enqueue(new Callback<Partidos>() {
+        mAPIService.savePartidos("BÁSQUETBOL",jornadita,"M").enqueue(new Callback<Partidos>() {
             @Override
             public void onResponse(Call<Partidos> call, Response<Partidos> response) {
 
