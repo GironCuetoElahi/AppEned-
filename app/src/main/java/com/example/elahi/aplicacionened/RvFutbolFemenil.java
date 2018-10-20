@@ -78,6 +78,8 @@ public class RvFutbolFemenil extends Fragment {
 
                     final List<PartidoModel> parts = response.body().getPartidos();
                     for(int i=0; i < parts.size(); i++){
+                        Log.d("Res1",parts.get(i).getRes1() + "");
+                        Log.d("Res2",parts.get(i).getRes2() + "");
 
                         partidos.add(new Clase_futbol(parts.get(i).getLocal(),parts.get(i).getVisita(),parts.get(i).getSede(),parts.get(i).getHora(), R.drawable.noticiafut, act, parts.get(i).getRes1(), parts.get(i).getRes2() ));
                     }
@@ -126,7 +128,7 @@ public class RvFutbolFemenil extends Fragment {
                              Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.fragment_rvfutbol, container, false);
         mAPIService = ApiUtils.getAPIService();
-        //partidos.clear();
+        partidos.clear();
         llenarPartidos();
         vistaPartidos();
         return v;

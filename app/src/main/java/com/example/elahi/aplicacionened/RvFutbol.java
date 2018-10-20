@@ -127,7 +127,7 @@ public class RvFutbol extends Fragment {
         Toast.makeText(getContext(), "Revisa tu conexion a internet", Toast.LENGTH_LONG);
 
         mAPIService = ApiUtils.getAPIService();
-        //partidos.clear();
+        partidos.clear();
         llenarPartidos();
         vistaPartidos();
         return v;
